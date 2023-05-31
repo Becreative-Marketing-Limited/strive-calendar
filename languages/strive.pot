@@ -1,0 +1,687 @@
+# Copyright (C) 2022 Strive Content Calendar
+# This file is distributed under the same license as the Strive Content Calendar package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Strive Content Calendar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../strive.php:66, ../strive.php:694
+msgid "Affiliate Program"
+msgstr ""
+
+#: ../strive.php:516
+msgid "Primary"
+msgstr ""
+
+#: ../strive.php:572, ../strive.php:614, ../inc/calendar/calendar.php:32
+msgid "Content Calendar"
+msgstr ""
+
+#: ../strive.php:581
+msgid "Welcome to Strive!"
+msgstr ""
+
+#: ../strive.php:582, ../inc/welcome.php:41
+msgid "Welcome"
+msgstr ""
+
+#: ../strive.php:658
+msgid "days"
+msgstr ""
+
+#: ../strive.php:656
+msgid "hours"
+msgstr ""
+
+#: ../strive.php:668, ../inc/filters.php:102, ../inc/settings.php:11, ../inc/welcome.php:46
+msgid "Calendar"
+msgstr ""
+
+#: ../strive.php:671, ../inc/settings.php:13
+msgid "Pipeline"
+msgstr ""
+
+#: ../strive.php:675, ../inc/settings.php:12
+msgid "Checklists"
+msgstr ""
+
+#: ../strive.php:678, ../inc/calendar/calendar.php:41
+msgid "Settings"
+msgstr ""
+
+#: ../strive.php:684
+msgid "Upgrade Now"
+msgstr ""
+
+#: ../strive.php:688
+msgid "Account"
+msgstr ""
+
+#: ../strive.php:691
+msgid "Contact"
+msgstr ""
+
+#: ../strive.php:769
+msgid "Not Started"
+msgstr ""
+
+#: ../strive.php:770
+msgid "Writing"
+msgstr ""
+
+#: ../strive.php:771
+msgid "Editing"
+msgstr ""
+
+#: ../strive.php:772
+msgid "Complete"
+msgstr ""
+
+#: ../strive.php:791
+msgid "Play the Checklists Tutorial"
+msgstr ""
+
+#: ../strive.php:788
+msgid "Play the Pipeline Tutorial"
+msgstr ""
+
+#: ../strive.php:785
+msgid "Play the Calendar Tutorial"
+msgstr ""
+
+#: ../inc/filters.php:15, ../inc/filters.php:19
+msgid "Filters"
+msgstr ""
+
+#: ../inc/filters.php:21
+msgid "Save new filter"
+msgstr ""
+
+#: ../inc/filters.php:25
+msgid "Create new filter"
+msgstr ""
+
+#: ../inc/filters.php:39, ../inc/calendar/calendar.php:512
+msgid "Category"
+msgstr ""
+
+#: ../inc/filters.php:50
+msgid "Tag"
+msgstr ""
+
+#: ../inc/filters.php:61
+msgid "Post Type"
+msgstr ""
+
+#: ../inc/filters.php:73
+msgid "Search Term"
+msgstr ""
+
+#: ../inc/filters.php:74
+msgid "Search for..."
+msgstr ""
+
+#: ../inc/filters.php:78
+msgid "Logic"
+msgstr ""
+
+#: ../inc/filters.php:82
+msgid "<b>Any:</b> show posts with ANY of the selected qualities."
+msgstr ""
+
+#: ../inc/filters.php:83
+msgid "<b>All:</b> show posts with ALL of the selected qualities."
+msgstr ""
+
+#: ../inc/filters.php:89
+msgid "Any"
+msgstr ""
+
+#: ../inc/filters.php:93
+msgid "All"
+msgstr ""
+
+#: ../inc/filters.php:98
+msgid "Context"
+msgstr ""
+
+#: ../inc/filters.php:106
+msgid "Sidebar"
+msgstr ""
+
+#: ../inc/filters.php:110
+msgid "Calendar & Sidebar"
+msgstr ""
+
+#: ../inc/filters.php:115
+msgid "Visibility of filtered posts"
+msgstr ""
+
+#: ../inc/filters.php:119
+msgid "Fade Out"
+msgstr ""
+
+#: ../inc/filters.php:123
+msgid "Remove"
+msgstr ""
+
+#: ../inc/filters.php:128
+msgid "Reset"
+msgstr ""
+
+#: ../inc/filters.php:131
+msgid "Delete"
+msgstr ""
+
+#: ../inc/filters.php:139
+msgid "Save filter"
+msgstr ""
+
+#: ../inc/filters.php:140
+msgid "Filter name"
+msgstr ""
+
+#: ../inc/filters.php:142
+msgid "Save Filter"
+msgstr ""
+
+#: ../inc/filters.php:145, ../inc/calendar/calendar.php:591
+msgid "Cancel"
+msgstr ""
+
+#: ../inc/filters.php:156
+msgid "Filter Settings"
+msgstr ""
+
+#: ../inc/filters.php:169
+msgid "Saved filters"
+msgstr ""
+
+#: ../inc/notes.php:16, ../inc/calendar/calendar.php:577
+msgid "Notes"
+msgstr ""
+
+#: ../inc/revisions.php:66, ../inc/revisions.php:286
+msgid "Create Revision"
+msgstr ""
+
+#: ../inc/revisions.php:238, ../inc/calendar/calendar.php:389
+msgid "Revision"
+msgstr ""
+
+#: ../inc/revisions.php:289
+msgid "Create a revision"
+msgstr ""
+
+#: ../inc/revisions.php:273
+msgid "This is a Revision"
+msgstr ""
+
+#: ../inc/revisions.php:275
+msgid "This is a revision"
+msgstr ""
+
+#: ../inc/statuses.php:17, ../inc/calendar/calendar.php:463
+msgid "Editorial Status"
+msgstr ""
+
+#: ../inc/welcome.php:51
+msgid "Statuses"
+msgstr ""
+
+#: ../inc/welcome.php:56
+msgid "Checklist"
+msgstr ""
+
+#: ../inc/welcome.php:61
+msgid "Finish"
+msgstr ""
+
+#: ../inc/welcome.php:142
+msgid "Setup Complete!"
+msgstr ""
+
+#: ../inc/welcome.php:143
+msgid "You're ready to create amazing content with Strive"
+msgstr ""
+
+#: ../inc/welcome.php:147
+msgid "If you need more guidance, you can find video tutorials and articles in the"
+msgstr ""
+
+#: ../inc/welcome.php:148
+msgid "Knowledge Base"
+msgstr ""
+
+#: ../inc/welcome.php:149
+msgid "or email us via the"
+msgstr ""
+
+#: ../inc/welcome.php:150
+msgid "contact form"
+msgstr ""
+
+#: ../inc/welcome.php:153
+msgid "Click the button below to go to the Content Calendar."
+msgstr ""
+
+#: ../inc/welcome.php:124
+msgid "Import a starter checklist"
+msgstr ""
+
+#: ../inc/welcome.php:125
+msgid "Use our pre-made checklist to organize your content workflow"
+msgstr ""
+
+#: ../inc/welcome.php:126
+msgid "Would you like to import an 18-step checklist to get started with?"
+msgstr ""
+
+#: ../inc/welcome.php:129
+msgid "Yes"
+msgstr ""
+
+#: ../inc/welcome.php:131
+msgid "No"
+msgstr ""
+
+#: ../inc/welcome.php:133, ../inc/welcome.php:119, ../inc/welcome.php:80
+msgid "Note:"
+msgstr ""
+
+#: ../inc/welcome.php:133
+msgid "You can fully customize the checklist later in the Checklists page."
+msgstr ""
+
+#: ../inc/welcome.php:84
+msgid "Assign statuses to your upcoming posts"
+msgstr ""
+
+#: ../inc/welcome.php:85
+msgid "Select statuses for a few of your posts to color-code them in the calendar"
+msgstr ""
+
+#: ../inc/welcome.php:95
+msgid "Post title"
+msgstr ""
+
+#: ../inc/welcome.php:96
+msgid "Status"
+msgstr ""
+
+#: ../inc/welcome.php:91
+msgid "You have no upcoming posts to organize. Continue to the next step."
+msgstr ""
+
+#: ../inc/welcome.php:119
+msgid "You'll be able to edit the statuses via the calendar and post editor too."
+msgstr ""
+
+#: ../inc/welcome.php:76
+msgid "Save & continue"
+msgstr ""
+
+#: ../inc/welcome.php:80
+msgid "These options can be changed later from the Settings menu."
+msgstr ""
+
+#: ../inc/welcome.php:67
+msgid "License Successfully Activated!"
+msgstr ""
+
+#: ../inc/welcome.php:68
+msgid "All of Strive's features are now available on your site."
+msgstr ""
+
+#: ../inc/welcome.php:69
+msgid "To help you get started, follow the setup wizard by clicking the \"Start Setup Wizard\" button below."
+msgstr ""
+
+#: ../inc/welcome.php:162
+msgid "Skip step"
+msgstr ""
+
+#: ../inc/welcome.php:163
+msgid "Save & Continue"
+msgstr ""
+
+#: ../inc/welcome.php:160
+msgid "Go to the Calendar"
+msgstr ""
+
+#: ../inc/welcome.php:158
+msgid "Start Setup Wizard"
+msgstr ""
+
+#: ../inc/welcome.php:168
+msgid "Skip to the calendar"
+msgstr ""
+
+#: ../inc/welcome.php:235
+msgid "Not array."
+msgstr ""
+
+#: ../inc/welcome.php:266
+msgid "Starter Checklist"
+msgstr ""
+
+#: ../inc/calendar/calendar.php:34
+msgid "You have <span id=\"post-count\" class=\"post-count\">%s</span> post scheduled"
+msgid_plural "You have <span id=\"post-count\" class=\"post-count\">%s</span> posts scheduled"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../inc/calendar/calendar.php:44
+msgid "Open Drafts Sidebar"
+msgstr ""
+
+#: ../inc/calendar/calendar.php:49
+msgid "Today"
+msgstr ""
+
+#: ../inc/calendar/calendar.php:60
+msgid "Status:"
+msgstr ""
+
+#: ../inc/calendar/calendar.php:70
+msgid "Schedule a %s"
+msgstr ""
+
+#: ../inc/calendar/calendar.php:72
+msgid "Choose a post type"
+msgstr ""
+
+#: ../inc/calendar/calendar.php:81
+msgid "Add New %s"
+msgstr ""
+
+#: ../inc/calendar/calendar.php:84
+msgid "Insert Draft"
+msgstr ""
+
+#: ../inc/calendar/calendar.php:95
+msgid "Unscheduled Drafts"
+msgstr ""
+
+#: ../inc/calendar/calendar.php:99
+msgid "Search drafts"
+msgstr ""
+
+#: ../inc/calendar/calendar.php:102
+msgid "Posts with the search term in the title are ranked first followed by matches in the post content."
+msgstr ""
+
+#: ../inc/calendar/calendar.php:105, ../inc/calendar/calendar.php:586
+msgid "Add New Draft"
+msgstr ""
+
+#: ../inc/calendar/calendar.php:122
+msgctxt "Abbreviation for Sunday"
+msgid "Sun"
+msgstr ""
+
+#: ../inc/calendar/calendar.php:123
+msgctxt "Abbreviation for Monday"
+msgid "Mon"
+msgstr ""
+
+#: ../inc/calendar/calendar.php:124
+msgctxt "Abbreviation for Tuesday"
+msgid "Tue"
+msgstr ""
+
+#: ../inc/calendar/calendar.php:125
+msgctxt "Abbreviation for Wednesday"
+msgid "Wed"
+msgstr ""
+
+#: ../inc/calendar/calendar.php:126
+msgctxt "Abbreviation for Thursday"
+msgid "Thu"
+msgstr ""
+
+#: ../inc/calendar/calendar.php:127
+msgctxt "Abbreviation for Fri"
+msgid "Fri"
+msgstr ""
+
+#: ../inc/calendar/calendar.php:128
+msgctxt "Abbreviation for Sat"
+msgid "Sat"
+msgstr ""
+
+#: ../inc/calendar/calendar.php:396
+msgid "Missed Deadline"
+msgstr ""
+
+#: ../inc/calendar/calendar.php:418
+msgid "Quick Edit"
+msgstr ""
+
+#: ../inc/calendar/calendar.php:416
+msgid "Add New"
+msgstr ""
+
+#: ../inc/calendar/calendar.php:425
+msgid "Preview"
+msgstr ""
+
+#: ../inc/calendar/calendar.php:423
+msgid "View"
+msgstr ""
+
+#: ../inc/calendar/calendar.php:429
+msgid "Open Editor"
+msgstr ""
+
+#: ../inc/calendar/calendar.php:430
+msgid "Trash"
+msgstr ""
+
+#: ../inc/calendar/calendar.php:440
+msgid ""
+"This post was not published because its Editorial Status was not \"Complete\" at the time of publication. You can reschedule it or click the \"Publish Post\" button below \n"
+"                            to publish it immediately using the scheduled publication date & time."
+msgstr ""
+
+#: ../inc/calendar/calendar.php:437
+msgid ""
+"WordPress failed to publish this scheduled post. Press the \"Publish Post\" button below to publish it immediately using the scheduled publication date & time. \n"
+"                            If this continues to occur, try installing <a target=\"_blank\" href=\"%s\">Missed Scheduled Posts Publisher<span class=\"dashicons dashicons-external\"></span></a>."
+msgstr ""
+
+#: ../inc/calendar/calendar.php:447
+msgid "Someone has edited this post since you opened the Quick Edit menu. You can submit your changes, or close the Quick Edit menu to use their edits. Only the fields shown here will be affected."
+msgstr ""
+
+#: ../inc/calendar/calendar.php:452
+msgid "Untitled"
+msgstr ""
+
+#: ../inc/calendar/calendar.php:456
+msgid "Title"
+msgstr ""
+
+#: ../inc/calendar/calendar.php:475
+msgid "Author"
+msgstr ""
+
+#: ../inc/calendar/calendar.php:488
+msgid "Date & Time"
+msgstr ""
+
+#: ../inc/calendar/calendar.php:508
+msgid "<b>Warning:</b> This date has already passed. Updating this %s will publish it."
+msgstr ""
+
+#: ../inc/calendar/calendar.php:509
+msgid "<b>Warning:</b> This is a future date. Updating this %s will unpublish and schedule it."
+msgstr ""
+
+#: ../inc/calendar/calendar.php:546
+msgid "Tags"
+msgstr ""
+
+#: ../inc/calendar/calendar.php:570
+msgid "Permalink"
+msgstr ""
+
+#: ../inc/calendar/calendar.php:588
+msgid "Update"
+msgstr ""
+
+#: ../inc/calendar/calendar.php:584
+msgid "Schedule"
+msgstr ""
+
+#: ../inc/calendar/calendar.php:582
+msgid "Publish"
+msgstr ""
+
+#: ../inc/calendar/calendar.php:594
+msgid "Or, click here to unschedule this post"
+msgstr ""
+
+#: ../inc/calendar/calendar.php:991
+msgid "Form action not set."
+msgstr ""
+
+#: ../inc/calendar/calendar.php:1180
+msgid "Choose a %s Draft"
+msgstr ""
+
+#: ../inc/calendar/calendar.php:1189
+msgid "Insert %s Draft"
+msgstr ""
+
+#: ../inc/calendar/live-updates.php:74
+msgid "Live"
+msgstr ""
+
+#: ../inc/calendar/settings.php:15
+msgid "Calendar Settings"
+msgstr ""
+
+#: ../inc/calendar/settings.php:18
+msgid "Customize the calendar"
+msgstr ""
+
+#: ../inc/calendar/settings.php:35, ../inc/calendar/settings.php:38
+msgid "Number of weeks to display"
+msgstr ""
+
+#: ../inc/calendar/settings.php:55, ../inc/calendar/settings.php:58
+msgid "Number of previous weeks to display"
+msgstr ""
+
+#: ../inc/calendar/settings.php:72
+msgid "Day to start the week on"
+msgstr ""
+
+#: ../inc/calendar/settings.php:75
+msgid "Which day of the week should the calendar start on?"
+msgstr ""
+
+#: ../inc/calendar/settings.php:89
+msgid "Default publication time for new posts"
+msgstr ""
+
+#: ../inc/calendar/settings.php:92
+msgid "Choose a default time for new posts"
+msgstr ""
+
+#: ../inc/calendar/settings.php:101
+msgid "Default post category"
+msgstr ""
+
+#: ../inc/calendar/settings.php:104
+msgid "Choose a default category for new posts"
+msgstr ""
+
+#: ../inc/calendar/settings.php:120
+msgid "Keep the Unscheduled Drafts sidebar open by default"
+msgstr ""
+
+#: ../inc/calendar/settings.php:134
+msgid "Prevent scheduled posts from publishing if their editorial status is not \"Complete.\""
+msgstr ""
+
+#: ../inc/calendar/settings.php:137
+msgid "Block scheduled posts from getting published if they don't have the \"Complete\" status."
+msgstr ""
+
+#: ../inc/calendar/settings.php:151, ../inc/calendar/settings.php:154
+msgid "Enable Color Blind Mode"
+msgstr ""
+
+#: ../inc/calendar/settings.php:168, ../inc/calendar/settings.php:171
+msgid "Show post categories in the calendar"
+msgstr ""
+
+#: ../inc/calendar/settings.php:196, ../inc/calendar/settings.php:199
+msgid "Category colors"
+msgstr ""
+
+#: ../inc/calendar/settings.php:212, ../inc/calendar/settings.php:215
+msgid "Show post tags in the calendar"
+msgstr ""
+
+#: ../inc/calendar/settings.php:229, ../inc/calendar/settings.php:230
+msgid "Post types to display in the Calendar"
+msgstr ""
+
+#: ../inc/calendar/settings.php:246
+msgid "Enable live calendar updates"
+msgstr ""
+
+#: ../inc/calendar/settings.php:266
+msgid "weeks"
+msgstr ""
+
+#: ../inc/calendar/settings.php:276
+msgid "0 weeks"
+msgstr ""
+
+#: ../inc/calendar/settings.php:280
+msgid "1 week"
+msgstr ""
+
+#: ../inc/calendar/settings.php:284
+msgid "2 weeks"
+msgstr ""
+
+#: ../inc/calendar/settings.php:317
+msgid "Use current time"
+msgstr ""
+
+#: ../inc/calendar/settings.php:416
+msgid "Display color choices"
+msgstr ""
+
+#: ../inc/calendar/settings.php:472
+msgid "Only custom post types with custom field support can be enabled."
+msgstr ""
+
+#: ../inc/calendar/settings.php:472
+msgid "Learn More"
+msgstr ""
+
+#: ../inc/calendar/settings.php:488
+msgid "Customize how the calendar works on your site"
+msgstr ""
+
+#: ../inc/calendar/settings.php:538
+msgid "Save Settings"
+msgstr ""
+
+#: ../inc/calendar/settings.php:556
+msgid "Customize how Strive works on your site."
+msgstr ""

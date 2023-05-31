@@ -1,0 +1,210 @@
+@import "variables";
+@import "global";
+
+// Pipeline
+.strive-pipeline {
+    margin-right: 20px;
+
+    &.rows {
+
+        .pipeline {
+            display: block;
+        }
+        .status-container {
+            width: 100%;
+            border-right: solid 1px $color-border;
+        }
+        .posts .post {
+            width: auto;
+        }
+        .button-rows {
+            color: #fff;
+            background-color: #222;
+        }
+    }
+    &.columns {
+
+        .button-columns {
+            color: #fff;
+            background-color: #222;
+        }
+    }
+    .pipeline {
+        display: flex;
+        justify-content: space-between;
+        clear: both;
+    }
+    .layout-buttons {
+
+        button {
+            background-color: #fff;
+            margin-right: 8px;
+            border: solid 1px #222;
+            color: #222;
+            padding: 4px 8px;
+            border-radius: 6px;
+            transition: color 0.1s, background-color 0.1s;
+
+            &:hover {
+                cursor: pointer;
+                // background-color: #f5f5f5;
+            }
+            span {
+                font-size: 18px;
+            }
+        }
+    }
+    .posts {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 18px;
+
+        .post {
+            position: relative;
+            margin: 0 12px 12px 0;
+            padding: 12px;
+            background: #fff;
+            border-radius: 4px;
+            width: 100%;
+        }
+        .title {
+            font-weight: 700;
+            margin-bottom: 3px;
+            padding-right: 24px;
+            transition: color 0.1s;
+        }
+        .meta {
+            font-size: 12px;
+        }
+        .edit-post {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            font-size: 0;
+            text-decoration: none;
+
+            &:hover,
+            &:active,
+            &:focus {
+
+                ~ .title {
+                    color: #000;
+                }
+            }
+        }
+        .post-type-icon {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+
+            span {
+                font-size: 16px;
+            }
+        }
+    }
+    .status-container {
+        margin: 24px 0;
+        padding: 18px 24px 24px;
+        background: $color-not-started-light;
+        width: 25%;
+        background: #fff;
+        border: solid 1px $color-border;
+        border-right: none;
+
+        &.not-started {
+
+            .post {
+                background: $color-not-started-light;
+            }
+        }
+        &.writing {
+
+            .post {
+                background: $color-writing-light;
+            }
+        }
+        &.editing {
+
+            .post {
+                background: $color-editing-light;
+            }
+        }
+        &.complete {
+            border-right: solid 1px #ccc;
+
+            .post {
+                background: $color-complete-light;
+            }
+        }
+        .count {
+            width: 100%;
+            margin-bottom: 0;
+        }
+    }
+    .heading {
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 12px 0 12px 0;
+        color: $color-dark-gray;
+    }
+    .scheduled {
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 600;
+        padding: 3px 8px;
+        color: #fff;
+        background: $color-purple-light;
+        margin-top: 4px;
+        border-radius: 16px;
+    }
+}
+
+.strive-settings-container {
+    @extend %popup-container;
+}
+.strive-settings {
+    @extend %popup-modal;
+
+    .pipeline-layout-label,
+    .post-types-label {
+        margin-right: 8px;
+        font-size: 15px;
+    
+        input {
+            margin-right: 2px !important;
+        }
+    }
+}
+
+.strive-content-calendar-parent.color-blind .strive-pipeline {
+
+    .status-container {
+
+        &.not-started {
+
+            .post {
+                background: $color-blind-not-started-light;
+            }
+        }
+        &.writing {
+
+            .post {
+                background: $color-blind-writing-light;
+            }
+        }
+        &.editing {
+
+            .post {
+                background: $color-blind-editing-light;
+            }
+        }
+        &.complete {
+
+            .post {
+                background: $color-blind-complete-light;
+            }
+        }
+    }
+}

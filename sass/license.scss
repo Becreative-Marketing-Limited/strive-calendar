@@ -1,0 +1,28 @@
+@import "variables";
+
+.license-expired-notice {
+    margin-top: 36px;
+    background: #fff;
+    padding: 24px;
+    border-radius: 6px;
+    border: solid 1px $color-border;
+    max-width: 600px;
+
+    p {
+        font-size: 16px;
+    }
+    .purchase {
+        @extend %button;
+        font-size: 16px;
+        font-weight: 700;
+        background-color: $color-orange;
+        color: #fff;
+        transition: background-color 0.1s;
+        border: none;
+
+        &:hover {
+            color: #fff;
+            background-color: $color-orange-hover;
+        }
+    }
+}

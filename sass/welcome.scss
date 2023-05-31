@@ -1,0 +1,449 @@
+@import "variables";
+
+// Style background like main menu background
+.posts_page_strive-content-calendar-welcome {
+    background: $color-bg;
+}
+.strive-welcome-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: $color-bg;
+    z-index: 99999;
+    overflow: scroll;
+
+    .logo-container {
+        text-align: center;
+    }
+    .logo {
+        width: 300px;
+        height: auto;
+    }
+    .inner {
+        max-width: 800px;
+        margin: 48px auto;
+    }
+    .progress {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        margin: 36px 0;
+
+        a {
+            position: relative;
+            display: block;
+            width: 100%;
+            padding: 24px;
+            text-align: center;
+            color: #525E66;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: none;
+
+            &:active,
+            &:focus {
+                box-shadow: none;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: -4px;
+                left: 0;
+                right: 0;
+                height: 4px;
+                background-color: $color-complete;
+            }
+            &:first-child {
+
+                &:after {
+                    left: 50%;
+                }
+            }
+            &:last-child {
+
+                &:after {
+                    right: 50%;
+                }
+            }
+            span {
+                position: absolute;
+                z-index: 9;
+                bottom: -14px;
+                left: calc(50% - 14px);
+                width: 18px;
+                height: 18px;
+                background-color: #fff;
+                border: solid 4px $color-complete;
+                border-radius: 50%;
+            }
+            &:after {
+                background-color: $color-wp-blue;
+                background-color: $color-complete;
+            }
+            span {
+                border-color: $color-wp-blue;
+                border-color: $color-complete;
+                background-color: #fff;
+            }
+            &.current {
+
+                ~ a {
+
+                    &:after {
+                        background-color: $color-border;
+                    }
+                    span {
+                        border-color: $color-border;
+                        background-color: $color-bg;
+                    }
+                }
+                &:before {
+                    content: '';
+                    position: absolute;
+                    z-index: 3;
+                    bottom: -4px;
+                    left: 50%;
+                    right: 0;
+                    height: 4px;
+                    background-color: $color-border;
+                }
+                span {
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        width: 8px;
+                        height: 8px;
+                        top: 5px;
+                        left: 5px;
+                        background: $color-complete;
+                        border-radius: 50%;
+                    }
+                }
+                &:last-child {
+
+                    &:before {
+                        background-color: $color-bg;
+                    }
+                }
+            }
+        }
+    }
+    .skip-container {
+        text-align: center;
+
+        a {
+            color: #929BA1;
+            font-size: 14px;
+
+            &:hover,
+            &:active,
+            &:focus {
+                color: #525E66;
+            }
+        }
+    }
+    .navigation {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        padding: 24px 60px;
+        border-top: solid 1px $color-border;
+        border-radius: 0 0 16px 16px;
+        background: $color-bg;
+        
+        p {
+            margin: 0;
+            padding: 0;
+        }
+        .start.button {
+            margin: 0 auto;
+        }
+        .button {
+            font-size: 16px;
+            padding: 6px 18px;
+            margin: 0;
+        }
+    }
+}
+.welcome-box {
+    background: #fff;
+    border-radius: 16px;
+    margin: 48px auto;
+    border: solid 1px $color-border;
+
+    .step {
+        padding: 48px 60px;
+        margin: 0 auto;
+        max-width: 620px;
+
+        &.welcome {
+            text-align: center;
+        }
+        select {
+            padding: 2px 28px 2px 10px;
+            border-color: $color-border;
+            border-radius: 5px;
+            box-shadow: 0 3px 2px 0 rgba(0,0,0,0.05);
+        }
+    }
+    form {
+
+        tr {
+            border-bottom: solid 1px #E4E8EB;
+        }
+        th {
+            font-weight: 400;
+            width: 80%;
+        }
+        td {
+            width: 20%;
+        }
+        th,
+        td {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        .submit,
+        .hidden-submit {
+            display: none;
+        } 
+    }
+    input[type=radio] {
+
+        &:checked::before {
+            position: relative;
+            top: -1px;
+            left: -1px;
+            background: none;
+            width: 6px;
+            height: 6px;
+            margin: 0;
+            border: solid 5px $color-wp-blue;
+        }
+    }
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 52px;
+        height: 28px;
+    }
+    .switch input {
+        display: none;
+
+        &:checked + .slider {
+            background-color: $color-wp-blue;
+
+            &:before {
+                transform: translateX(24px);
+            }
+        }
+    }
+    .slider {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: 24px;
+        cursor: pointer;
+        background-color: #ddd;
+        transition: background-color 0.2s;
+
+        &:before {
+            position: absolute;
+            content: "";
+            height: 22px;
+            width: 22px;
+            top: 3px;
+            left: 3px;
+            border-radius: 50%;
+            background-color: white;
+            box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
+            transition: transform 0.2s;
+        }
+    }
+    .form-table {
+
+        .calendar-weeks,
+        .calendar-prev-weeks,
+        .unscheduled-drafts-open,
+        .color-blind-mode,
+        .show-categories,
+        .category-colors,
+        .show-tags,
+        .live-updates {
+            display: none;
+        }
+    }
+    h2 {
+        font-size: 32px;
+        line-height: 1.334;
+        margin: 0;
+        font-weight: 700;
+        text-align: center;
+    }
+    .subheading {
+        font-size: 16px;
+        margin: 0 auto 48px;
+        text-align: center;
+    }
+    .welcome h2 {
+
+        &:before {
+            content: '\02713';
+            display: inline-block;
+            width: 42px;
+            height: 42px;
+            text-align: center;
+            background: $color-complete;
+            color: #fff;
+            border-radius: 100%;
+            margin-right: 8px;
+            font-size: 32px;
+        }
+    }
+    p {
+        font-size: 18px;
+    }
+    p.center {
+        text-align: center;
+    }
+    .intro {
+        margin-top: 48px;
+    }
+    .note {
+        margin-top: 36px;
+        font-size: 16px;
+
+        span {
+            padding: 2px 3px 3px 6px;
+            font-weight: 700;
+            background: #fff3d0;
+            border-radius: 3px;
+        }
+    }
+    .posts {
+        margin-top: 48px;
+
+        p {
+            margin: 0;
+        }
+    }
+    .posts-heading {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        margin-bottom: 18px;
+        padding-bottom: 18px;
+        border-bottom: solid 1px #E4E8EB;
+
+        span {
+            font-size: 18px;
+            font-weight: 700;
+        }
+    }
+    .post-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin-bottom: 18px;
+        padding-bottom: 18px;
+        border-bottom: solid 1px #E4E8EB;
+    }
+    .post-title {
+        
+        a {
+            color: $color-dark-gray;
+            text-decoration: none;
+
+            &:hover,
+            &:active,
+            &:focus {
+                color: $color-wp-blue;
+                text-decoration: underline;
+            }
+        }
+        .dashicons {
+            color: $color-wp-blue;
+            font-size: 18px;
+            line-height: 1.5;
+            margin-left: 4px;
+            text-decoration: none;
+        }
+    }
+    .status-container {
+        position: relative;
+        
+        select {
+            padding-left: 26px;
+        }
+        .circle {
+            position: absolute;
+            left: 10px;
+            top: 8px;
+            font-size: 14px;
+            margin-right: 4px;
+            color: $color-not-started;
+        }
+        &[data-status="writing"] {
+                
+            .circle {
+                color: $color-writing;
+            }
+        }
+        &[data-status="editing"] {
+                
+            .circle {
+                color: $color-editing;
+            }
+        }
+        &[data-status="complete"] {
+                
+            .circle {
+                color: $color-complete;
+            }
+        }
+    }
+    .no-posts {
+        background: $color-bg;
+        padding: 24px;
+        border: solid 1px $color-border;
+        border-radius: 6px;
+        text-align: center;
+    }
+    .radio-buttons {
+
+        label {
+            margin-right: 6px;
+        }
+    }
+    .post-type {
+        position: relative;
+    }
+    .post-types-label {
+        display: block;
+        float: left;
+        clear: left;
+    }
+    .disabled-note {
+        position: absolute;
+        top: 48px;
+        left: 0;
+        width: 400px;
+    }
+}
+@media all and (max-width: 782px) {
+
+    .post-types-label {
+        margin: 6px 0;
+    }
+    .disabled-note {
+        display: none;
+    }
+}

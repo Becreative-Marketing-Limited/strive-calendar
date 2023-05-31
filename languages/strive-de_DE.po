@@ -1,0 +1,408 @@
+# Copyright (C) 2022 Strive Content Calendar
+# This file is distributed under the same license as the Strive Content Calendar package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Strive Content Calendar\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;"
+"_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;"
+"esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 3.1\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: ../strive.php:67, ../strive.php:653
+msgid "Affiliate Program"
+msgstr "Partnerprogramm"
+
+#: ../strive.php:481
+msgid "Primary"
+msgstr "Primär"
+
+#: ../strive.php:531, ../strive.php:573
+msgid "Content Calendar"
+msgstr "Beitrags-Kalender"
+
+#: ../strive.php:540
+msgid "Welcome to Strive!"
+msgstr "Willkommen bei Strive!"
+
+#: ../strive.php:541, ../inc/welcome.php:40
+msgid "Welcome"
+msgstr "Herzlich Willkommen"
+
+#: ../strive.php:617
+msgid "days"
+msgstr "Tage"
+
+#: ../strive.php:615
+msgid "hours"
+msgstr "Stunden"
+
+#: ../strive.php:627, ../inc/filters.php:102, ../inc/settings.php:12,
+#: ../inc/welcome.php:43
+msgid "Calendar"
+msgstr "Kalender"
+
+#: ../strive.php:630, ../inc/settings.php:14
+msgid "Pipeline"
+msgstr "Pipeline"
+
+#: ../strive.php:634, ../inc/settings.php:13
+msgid "Checklists"
+msgstr "Checklisten"
+
+#: ../strive.php:637
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: ../strive.php:643
+msgid "Upgrade Now"
+msgstr "jetzt upgraden"
+
+#: ../strive.php:647
+msgid "Account"
+msgstr "Konto"
+
+#: ../strive.php:650
+msgid "Contact"
+msgstr "Kontakt"
+
+#: ../strive.php:725
+msgid "Not Started"
+msgstr "nicht gestartet"
+
+#: ../strive.php:726
+msgid "Writing"
+msgstr "Schreiben"
+
+#: ../strive.php:727
+msgid "Editing"
+msgstr "Bearbeiten"
+
+#: ../strive.php:728
+msgid "Complete"
+msgstr "Vollständig"
+
+#: ../strive.php:747
+msgid "Play the Checklists Tutorial"
+msgstr "Checklisten-Tutorial abspielen"
+
+#: ../strive.php:744
+msgid "Play the Pipeline Tutorial"
+msgstr "Pipeline-Tutorial abspielen"
+
+#: ../strive.php:741
+msgid "Play the Calendar Tutorial"
+msgstr "Kalender-Tutorial abspielen"
+
+#: ../inc/filters.php:15, ../inc/filters.php:19
+msgid "Filters"
+msgstr "Filter"
+
+#: ../inc/filters.php:21
+msgid "Save new filter"
+msgstr "Neuen Filter speichern"
+
+#: ../inc/filters.php:25
+msgid "Create new filter"
+msgstr "Neuen Filter anlegen"
+
+#: ../inc/filters.php:39
+msgid "Category"
+msgstr "Kategorie"
+
+#: ../inc/filters.php:50
+msgid "Tag"
+msgstr "Tag"
+
+#: ../inc/filters.php:61
+msgid "Post Type"
+msgstr "Beitragsart"
+
+#: ../inc/filters.php:73
+msgid "Search Term"
+msgstr "Suchbegriff"
+
+#: ../inc/filters.php:74
+msgid "Search for..."
+msgstr "Suche nach…"
+
+#: ../inc/filters.php:78
+msgid "Logic"
+msgstr "Logik"
+
+#: ../inc/filters.php:82
+msgid "<b>Any:</b> show posts with ANY of the selected qualities."
+msgstr ""
+"<b>Beliebig:</b> zeigt Beiträge mit JEDER der ausgewählten Eigenschaften."
+
+#: ../inc/filters.php:83
+msgid "<b>All:</b> show posts with ALL of the selected qualities."
+msgstr "<b>Alle:</b> zeigt Beiträge mit ALLEN ausgewählten Eigenschaften."
+
+#: ../inc/filters.php:89
+msgid "Any"
+msgstr "jede"
+
+#: ../inc/filters.php:93
+msgid "All"
+msgstr "alle"
+
+#: ../inc/filters.php:98
+msgid "Context"
+msgstr "Inhalt"
+
+#: ../inc/filters.php:106
+msgid "Sidebar"
+msgstr "Seitenleiste"
+
+#: ../inc/filters.php:110
+msgid "Calendar & Sidebar"
+msgstr "Kalender & Seitenleiste"
+
+#: ../inc/filters.php:115
+msgid "Visibility of filtered posts"
+msgstr "Sichtbarkeit der gefilterten Beiträge"
+
+#: ../inc/filters.php:119
+msgid "Fade Out"
+msgstr "Ausblenden"
+
+#: ../inc/filters.php:123
+msgid "Remove"
+msgstr "Löschen"
+
+#: ../inc/filters.php:128
+msgid "Reset"
+msgstr "Zurücksetzen"
+
+#: ../inc/filters.php:131
+msgid "Delete"
+msgstr "Löschen"
+
+#: ../inc/filters.php:139
+msgid "Save filter"
+msgstr "Filter speichern"
+
+#: ../inc/filters.php:140
+msgid "Filter name"
+msgstr "Filter-Name"
+
+#: ../inc/filters.php:142
+msgid "Save Filter"
+msgstr "Filter speichern"
+
+#: ../inc/filters.php:145
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: ../inc/filters.php:156
+msgid "Filter Settings"
+msgstr "Filter-Einstellungen"
+
+#: ../inc/filters.php:169
+msgid "Saved filters"
+msgstr "Gespeicherte Filter"
+
+#: ../inc/notes.php:16
+msgid "Notes"
+msgstr "Notizen"
+
+#: ../inc/revisions.php:63, ../inc/revisions.php:277
+msgid "Create Revision"
+msgstr "Revision erstellen"
+
+#: ../inc/revisions.php:230
+msgid "Revision"
+msgstr "Revision"
+
+#: ../inc/revisions.php:280
+msgid "Create a revision"
+msgstr "Eine Revision erstellen"
+
+#: ../inc/revisions.php:264
+msgid "This is a Revision"
+msgstr "Dies ist eine Revision"
+
+#: ../inc/revisions.php:266
+msgid "This is a revision"
+msgstr "Dies ist eine Revision"
+
+#: ../inc/statuses.php:16
+msgid "Editorial Status"
+msgstr "Redaktioneller Status"
+
+#: ../inc/welcome.php:46
+msgid "Statuses"
+msgstr "Status"
+
+#: ../inc/welcome.php:49
+msgid "Checklist"
+msgstr "Checkliste"
+
+#: ../inc/welcome.php:52
+msgid "Finish"
+msgstr "Oberfläche"
+
+#: ../inc/welcome.php:136
+msgid "Setup Complete!"
+msgstr "Einrichtung abgeschlossen!"
+
+#: ../inc/welcome.php:137
+msgid "You're ready to create amazing content with Strive"
+msgstr "Sie sind bereit, mit Strive tolle Inhalte zu erstellen"
+
+#: ../inc/welcome.php:140
+msgid ""
+"If you need more guidance, you can find video tutorials and articles in the"
+msgstr ""
+"Wenn Sie weitere Anleitungen benötigen, finden Sie Video-Tutorials und "
+"Artikel in der"
+
+#: ../inc/welcome.php:141
+msgid "Knowledge Base"
+msgstr "Wissensdatenbank"
+
+#: ../inc/welcome.php:142
+msgid "or email us via the"
+msgstr "oder senden Sie uns eine E-Mail über die"
+
+#: ../inc/welcome.php:143
+msgid "contact form"
+msgstr "Kontakt-Formular"
+
+#: ../inc/welcome.php:145
+msgid "Click the button below to go to the Content Calendar."
+msgstr ""
+"Klicken Sie auf die Schaltfläche unten, um zum Inhaltskalender zu gelangen."
+
+#: ../inc/welcome.php:117
+msgid "Import a starter checklist"
+msgstr "Importieren einer Starter-Checkliste"
+
+#: ../inc/welcome.php:118
+msgid "Use our pre-made checklist to organize your content workflow"
+msgstr ""
+"Nutzen Sie unsere vorgefertigte Checkliste, um Ihren Content-Workflow zu "
+"organisieren"
+
+#: ../inc/welcome.php:119
+msgid "Would you like to import an 18-step checklist to get started with?"
+msgstr ""
+"Möchten Sie eine 18-stufige Checkliste importieren, mit der Sie beginnen "
+"können?"
+
+#: ../inc/welcome.php:122
+msgid "Yes"
+msgstr "Ja"
+
+#: ../inc/welcome.php:124
+msgid "No"
+msgstr "Nein"
+
+#: ../inc/welcome.php:126, ../inc/welcome.php:112, ../inc/welcome.php:72
+msgid "Note:"
+msgstr "Notiz:"
+
+#: ../inc/welcome.php:126
+msgid "You can fully customize the checklist later in the Checklists page."
+msgstr ""
+"Sie können die Checkliste später auf der Seite Checklisten vollständig "
+"anpassen."
+
+#: ../inc/welcome.php:76
+msgid "Assign statuses to your upcoming posts"
+msgstr "Weisen Sie Ihren kommenden Beiträgen einen Status zu"
+
+#: ../inc/welcome.php:77
+msgid ""
+"Select statuses for a few of your posts to color-code them in the calendar"
+msgstr ""
+"Wählen Sie den Status für einige Ihrer Beiträge, um sie im Kalender "
+"farblich zu kennzeichnen."
+
+#: ../inc/welcome.php:87
+msgid "Post title"
+msgstr "Beitragstitel"
+
+#: ../inc/welcome.php:88
+msgid "Status"
+msgstr "Status"
+
+#: ../inc/welcome.php:83
+msgid "You have no upcoming posts to organize. Continue to the next step."
+msgstr ""
+"Sie haben keine kommenden Beiträge zu organisieren. Fahren Sie mit dem "
+"nächsten Schritt fort."
+
+#: ../inc/welcome.php:112
+msgid ""
+"You'll be able to edit the statuses via the calendar and post editor too."
+msgstr ""
+"Sie können den Status auch über den Kalender und den Beitragseditor "
+"bearbeiten."
+
+#: ../inc/welcome.php:67
+msgid "Save & continue"
+msgstr "Speichern und fortfahren"
+
+#: ../inc/welcome.php:72
+msgid "These options can be changed later from the Settings menu."
+msgstr ""
+"Diese Optionen können später über das Menü Einstellungen geändert werden."
+
+#: ../inc/welcome.php:58
+msgid "License Successfully Activated!"
+msgstr "Die Lizenz wurde erfolgreich aktiviert!"
+
+#: ../inc/welcome.php:59
+msgid "All of Strive's features are now available on your site."
+msgstr "Alle Funktionen von Strive sind jetzt auf Ihrer Website verfügbar."
+
+#: ../inc/welcome.php:60
+msgid ""
+"To help you get started, follow the setup wizard by clicking the \"Start "
+"Setup Wizard\" button below."
+msgstr ""
+"Um Ihnen den Einstieg zu erleichtern, folgen Sie dem "
+"Einrichtungsassistenten, indem Sie unten auf die Schaltfläche "
+"„Einrichtungsassistent starten“ klicken."
+
+#: ../inc/welcome.php:154
+msgid "Skip step"
+msgstr "Schritt überspringen"
+
+#: ../inc/welcome.php:155
+msgid "Save & Continue"
+msgstr "Speichern und fortfahren"
+
+#: ../inc/welcome.php:152
+msgid "Go to the Calendar"
+msgstr "Zum Kalender"
+
+#: ../inc/welcome.php:150
+msgid "Start Setup Wizard"
+msgstr "Einrichtungsassistent starten"
+
+#: ../inc/welcome.php:160
+msgid "Skip to the calendar"
+msgstr "Weiter zum Kalender"
+
+#: ../inc/welcome.php:225
+msgid "Not array."
+msgstr "Kein Feld."
+
+#: ../inc/welcome.php:255
+msgid "Starter Checklist"
+msgstr "Starter-Checkliste"
