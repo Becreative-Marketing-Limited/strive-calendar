@@ -1,0 +1,125 @@
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes live {
+  0% {
+    background-color: #EC807B;
+  }
+  50% {
+    background-color: #FF0B00;
+  }
+  100% {
+    background-color: #EC807B;
+  }
+}
+@keyframes live {
+  0% {
+    background-color: #EC807B;
+  }
+  50% {
+    background-color: #FF0B00;
+  }
+  100% {
+    background-color: #EC807B;
+  }
+}
+#scc_post_checklists select {
+  padding: 2px 28px 2px 10px;
+  border-color: #C7D5DE;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+}
+
+#wpadminbar #wp-admin-bar-strive-revision-label {
+  background: #4B87EC;
+  color: #000;
+}
+#wpadminbar #wp-admin-bar-strive-revision-label:hover {
+  background: #4B87EC;
+  color: #000;
+}
+#wpadminbar #wp-admin-bar-strive-revision-label:hover > div {
+  background: #4B87EC;
+  color: #fff;
+}
+
+.editorial-status {
+  width: 100%;
+  margin: 6px 0 12px;
+}
+
+.editorial-status .components-flex > div {
+  flex: 1 1 100%;
+}
+
+.checkbox-container {
+  display: none;
+}
+.checkbox-container.show {
+  display: block;
+}
+
+.no-checklists {
+  padding: 16px;
+}
+
+.checklist-select {
+  padding: 12px;
+  background: #f5f5f5;
+}
+
+#scc_post_checklists .inside {
+  padding: 0;
+  margin: 0;
+}
+
+.checklist-select-classic {
+  padding: 16px;
+  background: #F2F5F7;
+  border-bottom: solid 1px #C7D5DE;
+}
+
+.checklist-section {
+  display: none;
+  padding: 0 16px;
+  border-bottom: solid 1px #C7D5DE;
+}
+.checklist-section.show {
+  display: block;
+}
+.checklist-section:last-child {
+  border-bottom: none;
+}
+.checklist-section label {
+  font-size: 14px;
+}
+
+.checklist-section .section-title {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+#scc_post_checklists select {
+  width: 100%;
+}
+
+.strive-post-notes {
+  width: 100%;
+}

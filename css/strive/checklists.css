@@ -1,0 +1,945 @@
+.settings a,
+.settings button {
+  background: #fff;
+  border: solid 1px #C7D5DE;
+  display: inline-block;
+  padding: 8px 12px;
+  text-decoration: none;
+  border-radius: 5px;
+  color: #333;
+  background: #fff;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+.settings a:hover,
+.settings button:hover {
+  color: #2271b1;
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes live {
+  0% {
+    background-color: #EC807B;
+  }
+  50% {
+    background-color: #FF0B00;
+  }
+  100% {
+    background-color: #EC807B;
+  }
+}
+@keyframes live {
+  0% {
+    background-color: #EC807B;
+  }
+  50% {
+    background-color: #FF0B00;
+  }
+  100% {
+    background-color: #EC807B;
+  }
+}
+.strive-settings-container {
+  position: fixed;
+  z-index: 49;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+.visible.strive-settings-container {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media all and (min-width: 783px) {
+  .strive-settings-container {
+    left: 36px;
+  }
+}
+@media all and (min-width: 961px) {
+  .strive-settings-container {
+    left: 160px;
+  }
+}
+.strive-settings {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+  background: #fff;
+  box-shadow: 0 3px 18px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  width: 90%;
+  margin: 0 auto;
+  min-width: 500px;
+  max-width: 860px;
+  background: #F2F5F7;
+}
+.strive-settings .inner {
+  max-height: calc(100vh - 140px);
+  overflow-y: scroll;
+}
+.strive-settings h2 {
+  font-size: 21px;
+  padding: 36px 36px 24px;
+  margin: 0;
+  border-bottom: solid 1px #C7D5DE;
+  background: #fff;
+}
+.strive-settings .form-table {
+  display: block;
+  padding: 0 36px;
+}
+.strive-settings .submit {
+  margin: 36px 36px 12px;
+}
+.strive-settings .close-button {
+  position: absolute;
+  z-index: 9;
+  top: -22px;
+  right: -22px;
+  border-radius: 50%;
+  padding: 12px;
+  background-color: #121130;
+  color: #fff;
+  box-shadow: -2px 2px 3px 0 rgba(0, 0, 0, 0.15);
+  border: solid 1px #f5f5f5;
+  transition: box-shadow 0.2s;
+}
+.strive-settings .close-button:hover {
+  cursor: pointer;
+  box-shadow: -2px 2px 10px 0 rgba(0, 0, 0, 0.3);
+}
+.strive-settings .submit {
+  display: inline-block;
+  position: relative;
+}
+.strive-settings .saving .submit .button {
+  color: transparent;
+}
+.strive-settings .saving .loading-icon {
+  display: inline-block;
+}
+.strive-settings th {
+  width: auto;
+}
+.strive-settings tr {
+  border-bottom: solid 1px #E4E8EB;
+}
+.strive-settings .submit {
+  margin-top: 30px;
+}
+.strive-settings select {
+  padding: 2px 28px 2px 10px;
+  border-color: #C7D5DE;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+}
+.strive-settings label {
+  display: inline-block;
+}
+.strive-settings .calendar-week-option,
+.strive-settings .calendar-prev-week-option,
+.strive-settings .post-types-label,
+.strive-settings .pipeline-layout-label {
+  margin-right: 8px;
+  font-size: 15px;
+}
+.strive-settings .calendar-week-option input,
+.strive-settings .calendar-prev-week-option input,
+.strive-settings .post-types-label input,
+.strive-settings .pipeline-layout-label input {
+  margin-right: 2px !important;
+}
+.strive-settings .post-type label {
+  margin-right: 8px;
+}
+.strive-settings .post-type label input {
+  margin-right: 0;
+}
+.strive-settings .disabled-note {
+  font-size: 14px;
+  margin-top: 12px;
+  font-style: italic;
+}
+.strive-settings .expand-categories {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 6px 0;
+  margin: 0;
+  font-size: 14px;
+  background: none;
+  border: none;
+  color: #2271b1;
+}
+.strive-settings .expand-categories:hover {
+  color: #135e96;
+}
+.strive-settings .expand-categories:hover .text {
+  text-decoration: underline;
+}
+.strive-settings .category-colors {
+  max-height: 0;
+  overflow: hidden;
+}
+.strive-settings .category-colors.open {
+  max-height: none;
+  overflow: visible;
+}
+.strive-settings .category-colors ul {
+  margin-top: 0;
+  padding-top: 12px;
+}
+.strive-settings .category-colors li {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+.strive-settings .category-colors .pickr {
+  margin-right: 8px;
+}
+
+@media all and (max-width: 782px) {
+  .strive-settings input[type=radio]:checked::before {
+    width: 11px;
+    height: 11px;
+    border: solid 7px #2271b1;
+  }
+}
+.strive-post-checklists .tab {
+  position: relative;
+  display: inline-block;
+  vertical-align: bottom;
+  min-height: 68px;
+  padding: 24px;
+  color: #121130;
+  border: solid 1px #C7D5DE;
+  background-color: #E8EBED;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.1s, -webkit-transform 0.1s;
+  transition: transform 0.1s, background-color 0.1s;
+  transition: transform 0.1s, background-color 0.1s, -webkit-transform 0.1s;
+}
+.strive-post-checklists .tab:first-child {
+  border-radius: 6px 0 0 0;
+}
+.strive-post-checklists .tab:last-of-type {
+  border-radius: 0 6px 0 0;
+}
+.strive-post-checklists .tab:first-child:last-of-type {
+  border-radius: 6px 6px 0 0;
+}
+.strive-post-checklists .tab:not(:first-child) {
+  margin-left: -1px;
+}
+.strive-post-checklists .current.tab {
+  background: #fff;
+  border-bottom: none;
+}
+.strive-post-checklists .current.tab:after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #fff;
+}
+.strive-post-checklists .tab:not(.current):hover {
+  background-color: #F2F4F5;
+}
+
+.strive-content-calendar-parent,
+.strive-content-calendar-parent * {
+  box-sizing: border-box;
+}
+
+#wpbody-content > .error,
+#wpbody-content > .notice,
+.update-nag {
+  display: none;
+}
+
+.posts_page_strive-content-calendar {
+  background: #F2F5F7;
+}
+.posts_page_strive-content-calendar ul#adminmenu a.wp-has-current-submenu:after,
+.posts_page_strive-content-calendar ul#adminmenu > li.current > a.current:after {
+  border-right-color: #fff;
+}
+
+.strive-content-calendar-parent h1 {
+  display: inline-block;
+}
+.strive-content-calendar-parent .branding-bar {
+  display: flex;
+  flex-wrap: row;
+  background: #fff;
+  margin-left: -20px;
+  width: calc(100% + 20px);
+  border-bottom: solid 1px #C7D5DE;
+}
+.strive-content-calendar-parent .branding-bar .logo {
+  padding: 14px 14px 12px 14px;
+  border-right: solid 1px #C7D5DE;
+}
+.strive-content-calendar-parent .branding-bar .logo img {
+  height: 36px;
+}
+.strive-content-calendar-parent .branding-bar .title {
+  padding: 14px;
+  font-size: 21px;
+  font-weight: 700;
+  align-self: center;
+}
+.strive-content-calendar-parent .branding-bar .knowledgebase {
+  margin: 0 0 0 auto;
+  padding: 14px;
+  align-self: center;
+}
+.strive-content-calendar-parent .branding-bar .knowledgebase a {
+  display: flex;
+  padding: 9px 12px 9px 16px;
+  border-radius: 24px;
+  background-color: #2271b1;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.1s;
+}
+.strive-content-calendar-parent .branding-bar .knowledgebase a:hover, .strive-content-calendar-parent .branding-bar .knowledgebase a:active, .strive-content-calendar-parent .branding-bar .knowledgebase a:focus {
+  background-color: #135e96;
+}
+.strive-content-calendar-parent .branding-bar .knowledgebase a .dashicons {
+  font-size: 17px;
+  margin-left: 3px;
+}
+.strive-content-calendar-parent .tab-content {
+  margin-left: -20px;
+  padding: 20px 0 0 20px;
+}
+.strive-content-calendar-parent .nav-tab-wrapper {
+  margin-left: -20px;
+  padding-left: 20px;
+  padding-top: 0;
+  background: #fff;
+  border-color: #C7D5DE;
+}
+.strive-content-calendar-parent .nav-tab {
+  background: none;
+  border: none;
+  border-bottom: solid 3px #fff;
+  padding: 10px 5px;
+  margin-right: 6px;
+}
+.strive-content-calendar-parent .nav-tab:hover {
+  color: #000;
+}
+.strive-content-calendar-parent .nav-tab.nav-tab-active {
+  border-bottom: solid 3px #9AD3BC;
+}
+.strive-content-calendar-parent .nav-tab.account {
+  position: relative;
+  margin-left: 36px;
+}
+.strive-content-calendar-parent .nav-tab.account:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: -3px;
+  left: -18px;
+  width: 1px;
+  background: #C7D5DE;
+}
+.strive-content-calendar-parent .nav-tab.account, .strive-content-calendar-parent .nav-tab.affiliation, .strive-content-calendar-parent .nav-tab.contact {
+  color: #828B91;
+}
+.strive-content-calendar-parent .nav-tab.account:hover, .strive-content-calendar-parent .nav-tab.affiliation:hover, .strive-content-calendar-parent .nav-tab.contact:hover {
+  color: #000;
+}
+.strive-content-calendar-parent .upgrade-prompt {
+  display: inline-block;
+  align-self: center;
+  margin: 8px 12px 12px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: #FFECB3;
+}
+.strive-content-calendar-parent .upgrade-prompt p {
+  margin: 0;
+}
+.strive-content-calendar-parent .video-tut-link {
+  float: right;
+  margin-right: 14px;
+  padding: 14px 0 13px;
+  text-decoration: none;
+  font-size: 14px;
+}
+.strive-content-calendar-parent .video-tut-link .dashicons {
+  font-size: 19px;
+  margin: 0;
+}
+.strive-content-calendar-parent .button-primary {
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+}
+.strive-content-calendar-parent .heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 400;
+  padding: 6px 0 32px 20px;
+  color: #121130;
+}
+.strive-content-calendar-parent .heading .heading-title {
+  line-height: 1.3;
+}
+.strive-content-calendar-parent .heading .title {
+  display: block;
+  font-size: 28px;
+  font-weight: 800;
+}
+.strive-content-calendar-parent .heading .sub-title {
+  font-size: 16px;
+  color: #777;
+}
+.strive-content-calendar-parent .search {
+  width: 100%;
+  padding: 2px 8px;
+  padding: 4px 26px 4px 10px;
+  border-radius: 5px;
+  border-color: #C7D5DE;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+  transition: border-color 0.1s;
+  -webkit-appearance: none;
+}
+.strive-content-calendar-parent .search:focus {
+  border-color: #2271b1;
+}
+.strive-content-calendar-parent .search::-webkit-search-decoration, .strive-content-calendar-parent .search::-webkit-search-cancel-button, .strive-content-calendar-parent .search::-webkit-search-results-button, .strive-content-calendar-parent .search::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
+.strive-settings .notice,
+.strive-post-checklists .notice {
+  position: fixed !important;
+  z-index: 99;
+  top: 130px;
+  left: calc(50% - 120px);
+  width: 240px;
+  text-align: center;
+  border: none;
+  padding: 12px 22px;
+  background: #222;
+  color: #fff;
+  -webkit-animation-name: disappear;
+          animation-name: disappear;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  margin: 0;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.settings {
+  float: right;
+  margin-left: 12px;
+}
+.settings a,
+.settings button {
+  display: flex;
+  align-content: center;
+}
+
+.settings-icon {
+  height: 16px;
+  width: auto;
+  align-self: center;
+  margin-right: 6px;
+}
+
+@-webkit-keyframes disappear {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes disappear {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.loading-icon {
+  position: absolute;
+  top: 12px;
+  left: calc(50% - 10px);
+  color: #fff;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-name: spin;
+          animation-name: spin;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  display: none;
+}
+
+.select2-container--classic.select2-container--open .select2-dropdown {
+  border-color: #2271b1 !important;
+}
+
+.select2-container--classic .select2-results__option--highlighted.select2-results__option--selectable {
+  background-color: #2271b1 !important;
+}
+
+.select2-container--classic .select2-results__options {
+  margin-bottom: -6px;
+}
+
+.select2-results {
+  overflow: hidden;
+}
+
+.select2-results__option--selected {
+  display: none;
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 9;
+  bottom: calc(100% + 12px);
+  background: rgba(18, 17, 48, 0.9);
+  color: #fff;
+  padding: 12px;
+  border-radius: 4px;
+  margin-top: 12px;
+  font-size: 12px;
+  line-height: 1.4;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s, visibility 0.2s;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+}
+.tooltip:hover {
+  opacity: 1;
+  visibility: visible;
+}
+.tooltip:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 100%;
+  right: 12px;
+  border-top: solid 12px rgba(18, 17, 48, 0.8);
+  border-left: solid 18px transparent;
+  border-radius: 0 0 4px 0;
+}
+
+.pcr-app .pcr-swatches {
+  justify-content: space-between;
+}
+.pcr-app .pcr-interaction input {
+  line-height: 2;
+  max-height: none;
+  box-shadow: none;
+  border: none;
+}
+
+input[type=radio]:checked::before {
+  position: relative;
+  top: -1px;
+  left: -1px;
+  background: none;
+  width: 6px;
+  height: 6px;
+  margin: 0;
+  border: solid 5px #2271b1;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 52px;
+  height: 28px;
+}
+
+.switch input {
+  display: none;
+}
+.switch input:checked + .slider {
+  background-color: #2271b1;
+}
+.switch input:checked + .slider:before {
+  -webkit-transform: translateX(24px);
+          transform: translateX(24px);
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 24px;
+  cursor: pointer;
+  background-color: #ddd;
+  transition: background-color 0.2s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  top: 3px;
+  left: 3px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+.strive-content-calendar-parent .heading {
+  padding-right: 20px;
+}
+
+.strive-post-checklists {
+  box-sizing: border-box;
+  margin-right: 20px;
+  padding-bottom: 195px;
+}
+.strive-post-checklists * {
+  box-sizing: border-box;
+}
+.strive-post-checklists .loading {
+  display: none;
+  z-index: 39;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.strive-post-checklists .loading img {
+  width: 200px;
+  height: 200px;
+}
+.strive-post-checklists form {
+  position: relative;
+}
+.strive-post-checklists .form-table {
+  position: relative;
+}
+.strive-post-checklists .checklist-tabs {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  z-index: 9;
+}
+.strive-post-checklists .checklist-tabs a:focus {
+  outline: none;
+  box-shadow: none;
+}
+.strive-post-checklists .tab {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.strive-post-checklists .create-checklist {
+  padding: 24px;
+  border: none;
+  background: none;
+  margin: 0;
+  cursor: pointer;
+  color: #2271b1;
+  text-decoration: underline;
+}
+.strive-post-checklists .checklist-container {
+  position: relative;
+  margin-top: -1px;
+  background: #fff;
+  border: solid 1px #C7D5DE;
+  border-radius: 0 6px 0 0;
+  display: none;
+}
+.strive-post-checklists .checklist-container.current {
+  display: block;
+}
+.strive-post-checklists h2 {
+  display: none;
+}
+.strive-post-checklists .form-table {
+  margin-top: 0;
+}
+.strive-post-checklists .form-table th {
+  display: none;
+}
+.strive-post-checklists .form-table td {
+  display: block;
+  padding: 0;
+}
+.strive-post-checklists .description {
+  font-size: 16px;
+}
+.strive-post-checklists .checklist-title-container {
+  position: relative;
+  display: inline-block;
+  z-index: 2;
+}
+.strive-post-checklists .checklist-title {
+  margin: 18px 24px;
+  padding-left: 0;
+  font-size: 18px;
+  border-color: transparent;
+  border-radius: 0;
+  background: none;
+  min-width: 300px;
+}
+.strive-post-checklists .checklist-title:hover {
+  border-color: transparent;
+  border-bottom-color: #C7D5DE;
+}
+.strive-post-checklists .checklist-title:hover + span {
+  opacity: 1;
+}
+.strive-post-checklists .checklist-title:active, .strive-post-checklists .checklist-title:focus {
+  border-color: transparent;
+  border-bottom-color: #2271b1;
+  box-shadow: none;
+}
+.strive-post-checklists .checklist-title:active + span, .strive-post-checklists .checklist-title:focus + span {
+  opacity: 1;
+  color: #2271b1;
+}
+.strive-post-checklists .dashicons-edit {
+  position: absolute;
+  z-index: -1;
+  top: 28px;
+  right: 14px;
+  color: #ADBBC4;
+  opacity: 0;
+}
+.strive-post-checklists .delete-button-container {
+  float: right;
+  padding: 18px 24px;
+}
+.strive-post-checklists .delete-button {
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+}
+.strive-post-checklists .delete-button:hover, .strive-post-checklists .delete-button:active, .strive-post-checklists .delete-button:focus {
+  color: #EC524B;
+  border-color: #EC524B;
+}
+.strive-post-checklists .delete-button .dashicons {
+  font-size: 18px;
+  margin-right: 4px;
+}
+.strive-post-checklists .section-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  clear: both;
+}
+.strive-post-checklists .section {
+  position: relative;
+  padding: 18px 24px 24px;
+  border-top: solid 1px #C7D5DE;
+  width: 50%;
+  background: #fff;
+  min-height: 188px;
+  background: #F2F5F7;
+}
+.strive-post-checklists .section.writing {
+  border-left: solid 1px #C7D5DE;
+}
+.strive-post-checklists .section.complete {
+  border-left: solid 1px #C7D5DE;
+}
+.strive-post-checklists .section input {
+  display: block;
+  width: 100%;
+  margin-bottom: 8px;
+  border-color: #C7D5DE;
+  border-radius: 5px;
+  padding: 4px 8px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+  transition: border-color 0.1s;
+}
+.strive-post-checklists .section input:focus {
+  border-color: #2271b1;
+}
+.strive-post-checklists .section .circle {
+  color: #EC524B;
+}
+.strive-post-checklists .section.writing .circle {
+  color: #F5B461;
+}
+.strive-post-checklists .section.editing .circle {
+  color: #F3EAC2;
+}
+.strive-post-checklists .section.complete .circle {
+  color: #9AD3BC;
+}
+.strive-post-checklists .section-title {
+  position: relative;
+  z-index: 3;
+  font-size: 16px;
+  margin-bottom: 18px;
+}
+.strive-post-checklists .add-item {
+  position: relative;
+  z-index: 3;
+  margin: 18px 0 12px;
+  color: #fff;
+  background-color: #222;
+  border: none;
+  transition: background-color 0.1s;
+}
+.strive-post-checklists .add-item:hover, .strive-post-checklists .add-item:active, .strive-post-checklists .add-item:focus {
+  background-color: #333;
+  color: #fff;
+}
+.strive-post-checklists .task-container {
+  min-height: 38px;
+}
+.strive-post-checklists .task {
+  position: relative;
+}
+.strive-post-checklists .task:hover .remove-item,
+.strive-post-checklists .task:hover .drag-handle {
+  opacity: 1;
+}
+.strive-post-checklists .task.gu-mirror input, .strive-post-checklists .task.gu-transit input {
+  width: 100%;
+}
+.strive-post-checklists .remove-item {
+  position: absolute;
+  top: 8px;
+  right: 4px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  color: #EC524B;
+  color: #000;
+  opacity: 0;
+  transition: 0.1s opacity;
+}
+.strive-post-checklists .remove-item:hover {
+  cursor: pointer;
+}
+.strive-post-checklists .drag-handle {
+  position: absolute;
+  top: 11px;
+  right: calc(100% + 3px);
+  width: 14px;
+  opacity: 0;
+  color: #121130;
+  transition: 0.1s opacity;
+}
+.strive-post-checklists .drag-handle:hover {
+  cursor: pointer;
+}
+.strive-post-checklists .submit {
+  margin-top: -9px;
+  padding: 24px !important;
+  background: #fff;
+  border: solid 1px #C7D5DE;
+  border-radius: 0 0 6px 6px;
+}
+.strive-post-checklists .default-checklist-row select {
+  padding: 2px 28px 2px 10px;
+  border-color: #bbb;
+  border-radius: 5px;
+  box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.05);
+}
+.strive-post-checklists .setting-title {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+.strive-post-checklists .import-export {
+  display: flex;
+  float: right;
+  padding: 18px 0;
+}
+.strive-post-checklists .import-export button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+.strive-post-checklists .import-export button .dashicons {
+  font-size: 18px;
+  margin-right: 4px;
+}
+.strive-post-checklists .import-export .export-button {
+  margin-right: 6px;
+}
+.strive-post-checklists .checklists-order {
+  display: none;
+}
+
+.strive-content-calendar-parent.color-blind .strive-post-checklists .section .circle {
+  color: #F29052;
+}
+.strive-content-calendar-parent.color-blind .strive-post-checklists .section.writing .circle {
+  color: #FFD666;
+}
+.strive-content-calendar-parent.color-blind .strive-post-checklists .section.editing .circle {
+  color: #73B9DE;
+}
+.strive-content-calendar-parent.color-blind .strive-post-checklists .section.complete .circle {
+  color: #7284C2;
+}

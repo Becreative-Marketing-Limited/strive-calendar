@@ -1,0 +1,2082 @@
+.strive-calendar .calendar-controls .reset-button, .strive-calendar .unscheduled-drafts-toggle, .filters .reset-filter,
+.filters .delete-filter, .toggle-filters, .settings a,
+.settings button {
+  background: #fff;
+  border: solid 1px #C7D5DE;
+  display: inline-block;
+  padding: 8px 12px;
+  text-decoration: none;
+  border-radius: 5px;
+  color: #333;
+  background: #fff;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+.strive-calendar .calendar-controls .reset-button:hover, .strive-calendar .unscheduled-drafts-toggle:hover, .filters .reset-filter:hover,
+.filters .delete-filter:hover, .toggle-filters:hover, .settings a:hover,
+.settings button:hover {
+  color: #2271b1;
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes live {
+  0% {
+    background-color: #EC807B;
+  }
+  50% {
+    background-color: #FF0B00;
+  }
+  100% {
+    background-color: #EC807B;
+  }
+}
+@keyframes live {
+  0% {
+    background-color: #EC807B;
+  }
+  50% {
+    background-color: #FF0B00;
+  }
+  100% {
+    background-color: #EC807B;
+  }
+}
+.strive-settings-container, .strive-calendar .post-details-container {
+  position: fixed;
+  z-index: 49;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+.visible.strive-settings-container, .strive-calendar .visible.post-details-container {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media all and (min-width: 783px) {
+  .strive-settings-container, .strive-calendar .post-details-container {
+    left: 36px;
+  }
+}
+@media all and (min-width: 961px) {
+  .strive-settings-container, .strive-calendar .post-details-container {
+    left: 160px;
+  }
+}
+.strive-settings {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+  background: #fff;
+  box-shadow: 0 3px 18px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  width: 90%;
+  margin: 0 auto;
+  min-width: 500px;
+  max-width: 860px;
+  background: #F2F5F7;
+}
+.strive-settings .inner {
+  max-height: calc(100vh - 140px);
+  overflow-y: scroll;
+}
+.strive-settings h2 {
+  font-size: 21px;
+  padding: 36px 36px 24px;
+  margin: 0;
+  border-bottom: solid 1px #C7D5DE;
+  background: #fff;
+}
+.strive-settings .form-table {
+  display: block;
+  padding: 0 36px;
+}
+.strive-settings .submit {
+  margin: 36px 36px 12px;
+}
+.strive-settings .close-button {
+  position: absolute;
+  z-index: 9;
+  top: -22px;
+  right: -22px;
+  border-radius: 50%;
+  padding: 12px;
+  background-color: #121130;
+  color: #fff;
+  box-shadow: -2px 2px 3px 0 rgba(0, 0, 0, 0.15);
+  border: solid 1px #f5f5f5;
+  transition: box-shadow 0.2s;
+}
+.strive-settings .close-button:hover {
+  cursor: pointer;
+  box-shadow: -2px 2px 10px 0 rgba(0, 0, 0, 0.3);
+}
+.strive-settings .submit {
+  display: inline-block;
+  position: relative;
+}
+.strive-settings .saving .submit .button {
+  color: transparent;
+}
+.strive-settings .saving .loading-icon {
+  display: inline-block;
+}
+.strive-settings th {
+  width: auto;
+}
+.strive-settings tr {
+  border-bottom: solid 1px #E4E8EB;
+}
+.strive-settings .submit {
+  margin-top: 30px;
+}
+.strive-settings select {
+  padding: 2px 28px 2px 10px;
+  border-color: #C7D5DE;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+}
+.strive-settings label {
+  display: inline-block;
+}
+.strive-settings .calendar-week-option,
+.strive-settings .calendar-prev-week-option,
+.strive-settings .post-types-label,
+.strive-settings .pipeline-layout-label {
+  margin-right: 8px;
+  font-size: 15px;
+}
+.strive-settings .calendar-week-option input,
+.strive-settings .calendar-prev-week-option input,
+.strive-settings .post-types-label input,
+.strive-settings .pipeline-layout-label input {
+  margin-right: 2px !important;
+}
+.strive-settings .post-type label {
+  margin-right: 8px;
+}
+.strive-settings .post-type label input {
+  margin-right: 0;
+}
+.strive-settings .disabled-note {
+  font-size: 14px;
+  margin-top: 12px;
+  font-style: italic;
+}
+.strive-settings .expand-categories {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 6px 0;
+  margin: 0;
+  font-size: 14px;
+  background: none;
+  border: none;
+  color: #2271b1;
+}
+.strive-settings .expand-categories:hover {
+  color: #135e96;
+}
+.strive-settings .expand-categories:hover .text {
+  text-decoration: underline;
+}
+.strive-settings .category-colors {
+  max-height: 0;
+  overflow: hidden;
+}
+.strive-settings .category-colors.open {
+  max-height: none;
+  overflow: visible;
+}
+.strive-settings .category-colors ul {
+  margin-top: 0;
+  padding-top: 12px;
+}
+.strive-settings .category-colors li {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+.strive-settings .category-colors .pickr {
+  margin-right: 8px;
+}
+
+@media all and (max-width: 782px) {
+  .strive-settings input[type=radio]:checked::before {
+    width: 11px;
+    height: 11px;
+    border: solid 7px #2271b1;
+  }
+}
+.strive-calendar .post-details form .select2-container--focus .select2-selection, .filters .select2-container--focus .select2-selection {
+  border-color: #2271b1 !important;
+}
+.strive-calendar .post-details form .select2-container.no-category .select2-selection, .filters .select2-container.no-category .select2-selection {
+  border-color: #EC524B !important;
+}
+.strive-calendar .post-details form .select2-selection, .filters .select2-selection {
+  display: flex !important;
+  align-items: center;
+  background-color: #fff !important;
+  border: solid 1px #C7D5DE !important;
+  padding: 5px !important;
+  min-height: 51px !important;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05) !important;
+  transition: border-color 0.2s !important;
+}
+.strive-calendar .post-details form .select2-selection ul, .filters .select2-selection ul {
+  margin: 0;
+}
+.strive-calendar .post-details form .select2-selection li, .filters .select2-selection li {
+  background-color: #121130;
+  color: #fff;
+  border: none;
+  border-radius: 24px !important;
+  padding-right: 10px !important;
+}
+.strive-calendar .post-details form .select2-search__field, .filters .select2-search__field {
+  vertical-align: middle !important;
+  margin-top: 0 !important;
+  background: none;
+}
+.strive-calendar .post-details form .select2-selection__choice__remove, .filters .select2-selection__choice__remove {
+  padding: 4px 3px 5px 10px !important;
+  color: #fff !important;
+}
+
+.filters select,
+.filters input {
+  padding: 2px 28px 2px 10px;
+  border-color: #C7D5DE;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+}
+
+.strive-content-calendar-parent,
+.strive-content-calendar-parent * {
+  box-sizing: border-box;
+}
+
+#wpbody-content > .error,
+#wpbody-content > .notice,
+.update-nag {
+  display: none;
+}
+
+.posts_page_strive-content-calendar {
+  background: #F2F5F7;
+}
+.posts_page_strive-content-calendar ul#adminmenu a.wp-has-current-submenu:after,
+.posts_page_strive-content-calendar ul#adminmenu > li.current > a.current:after {
+  border-right-color: #fff;
+}
+
+.strive-content-calendar-parent h1 {
+  display: inline-block;
+}
+.strive-content-calendar-parent .branding-bar {
+  display: flex;
+  flex-wrap: row;
+  background: #fff;
+  margin-left: -20px;
+  width: calc(100% + 20px);
+  border-bottom: solid 1px #C7D5DE;
+}
+.strive-content-calendar-parent .branding-bar .logo {
+  padding: 14px 14px 12px 14px;
+  border-right: solid 1px #C7D5DE;
+}
+.strive-content-calendar-parent .branding-bar .logo img {
+  height: 36px;
+}
+.strive-content-calendar-parent .branding-bar .title {
+  padding: 14px;
+  font-size: 21px;
+  font-weight: 700;
+  align-self: center;
+}
+.strive-content-calendar-parent .branding-bar .knowledgebase {
+  margin: 0 0 0 auto;
+  padding: 14px;
+  align-self: center;
+}
+.strive-content-calendar-parent .branding-bar .knowledgebase a {
+  display: flex;
+  padding: 9px 12px 9px 16px;
+  border-radius: 24px;
+  background-color: #2271b1;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.1s;
+}
+.strive-content-calendar-parent .branding-bar .knowledgebase a:hover, .strive-content-calendar-parent .branding-bar .knowledgebase a:active, .strive-content-calendar-parent .branding-bar .knowledgebase a:focus {
+  background-color: #135e96;
+}
+.strive-content-calendar-parent .branding-bar .knowledgebase a .dashicons {
+  font-size: 17px;
+  margin-left: 3px;
+}
+.strive-content-calendar-parent .tab-content {
+  margin-left: -20px;
+  padding: 20px 0 0 20px;
+}
+.strive-content-calendar-parent .nav-tab-wrapper {
+  margin-left: -20px;
+  padding-left: 20px;
+  padding-top: 0;
+  background: #fff;
+  border-color: #C7D5DE;
+}
+.strive-content-calendar-parent .nav-tab {
+  background: none;
+  border: none;
+  border-bottom: solid 3px #fff;
+  padding: 10px 5px;
+  margin-right: 6px;
+}
+.strive-content-calendar-parent .nav-tab:hover {
+  color: #000;
+}
+.strive-content-calendar-parent .nav-tab.nav-tab-active {
+  border-bottom: solid 3px #9AD3BC;
+}
+.strive-content-calendar-parent .nav-tab.account {
+  position: relative;
+  margin-left: 36px;
+}
+.strive-content-calendar-parent .nav-tab.account:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: -3px;
+  left: -18px;
+  width: 1px;
+  background: #C7D5DE;
+}
+.strive-content-calendar-parent .nav-tab.account, .strive-content-calendar-parent .nav-tab.affiliation, .strive-content-calendar-parent .nav-tab.contact {
+  color: #828B91;
+}
+.strive-content-calendar-parent .nav-tab.account:hover, .strive-content-calendar-parent .nav-tab.affiliation:hover, .strive-content-calendar-parent .nav-tab.contact:hover {
+  color: #000;
+}
+.strive-content-calendar-parent .upgrade-prompt {
+  display: inline-block;
+  align-self: center;
+  margin: 8px 12px 12px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: #FFECB3;
+}
+.strive-content-calendar-parent .upgrade-prompt p {
+  margin: 0;
+}
+.strive-content-calendar-parent .video-tut-link {
+  float: right;
+  margin-right: 14px;
+  padding: 14px 0 13px;
+  text-decoration: none;
+  font-size: 14px;
+}
+.strive-content-calendar-parent .video-tut-link .dashicons {
+  font-size: 19px;
+  margin: 0;
+}
+.strive-content-calendar-parent .button-primary {
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+}
+.strive-content-calendar-parent .heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 400;
+  padding: 6px 0 32px 20px;
+  color: #121130;
+}
+.strive-content-calendar-parent .heading .heading-title {
+  line-height: 1.3;
+}
+.strive-content-calendar-parent .heading .title {
+  display: block;
+  font-size: 28px;
+  font-weight: 800;
+}
+.strive-content-calendar-parent .heading .sub-title {
+  font-size: 16px;
+  color: #777;
+}
+.strive-content-calendar-parent .search {
+  width: 100%;
+  padding: 2px 8px;
+  padding: 4px 26px 4px 10px;
+  border-radius: 5px;
+  border-color: #C7D5DE;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+  transition: border-color 0.1s;
+  -webkit-appearance: none;
+}
+.strive-content-calendar-parent .search:focus {
+  border-color: #2271b1;
+}
+.strive-content-calendar-parent .search::-webkit-search-decoration, .strive-content-calendar-parent .search::-webkit-search-cancel-button, .strive-content-calendar-parent .search::-webkit-search-results-button, .strive-content-calendar-parent .search::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
+.strive-settings .notice,
+.strive-post-checklists .notice {
+  position: fixed !important;
+  z-index: 99;
+  top: 130px;
+  left: calc(50% - 120px);
+  width: 240px;
+  text-align: center;
+  border: none;
+  padding: 12px 22px;
+  background: #222;
+  color: #fff;
+  -webkit-animation-name: disappear;
+          animation-name: disappear;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  margin: 0;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.settings {
+  float: right;
+  margin-left: 12px;
+}
+.settings a,
+.settings button {
+  display: flex;
+  align-content: center;
+}
+
+.settings-icon {
+  height: 16px;
+  width: auto;
+  align-self: center;
+  margin-right: 6px;
+}
+
+@-webkit-keyframes disappear {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes disappear {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.loading-icon {
+  position: absolute;
+  top: 12px;
+  left: calc(50% - 10px);
+  color: #fff;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-name: spin;
+          animation-name: spin;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  display: none;
+}
+
+.select2-container--classic.select2-container--open .select2-dropdown {
+  border-color: #2271b1 !important;
+}
+
+.select2-container--classic .select2-results__option--highlighted.select2-results__option--selectable {
+  background-color: #2271b1 !important;
+}
+
+.select2-container--classic .select2-results__options {
+  margin-bottom: -6px;
+}
+
+.select2-results {
+  overflow: hidden;
+}
+
+.select2-results__option--selected {
+  display: none;
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 9;
+  bottom: calc(100% + 12px);
+  background: rgba(18, 17, 48, 0.9);
+  color: #fff;
+  padding: 12px;
+  border-radius: 4px;
+  margin-top: 12px;
+  font-size: 12px;
+  line-height: 1.4;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s, visibility 0.2s;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+}
+.tooltip:hover {
+  opacity: 1;
+  visibility: visible;
+}
+.tooltip:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 100%;
+  right: 12px;
+  border-top: solid 12px rgba(18, 17, 48, 0.8);
+  border-left: solid 18px transparent;
+  border-radius: 0 0 4px 0;
+}
+
+.pcr-app .pcr-swatches {
+  justify-content: space-between;
+}
+.pcr-app .pcr-interaction input {
+  line-height: 2;
+  max-height: none;
+  box-shadow: none;
+  border: none;
+}
+
+input[type=radio]:checked::before {
+  position: relative;
+  top: -1px;
+  left: -1px;
+  background: none;
+  width: 6px;
+  height: 6px;
+  margin: 0;
+  border: solid 5px #2271b1;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 52px;
+  height: 28px;
+}
+
+.switch input {
+  display: none;
+}
+.switch input:checked + .slider {
+  background-color: #2271b1;
+}
+.switch input:checked + .slider:before {
+  -webkit-transform: translateX(24px);
+          transform: translateX(24px);
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 24px;
+  cursor: pointer;
+  background-color: #ddd;
+  transition: background-color 0.2s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  top: 3px;
+  left: 3px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+.filters-container {
+  position: relative;
+}
+
+.toggle-filters {
+  font-size: 16px;
+}
+.toggle-filters.open {
+  color: #2271b1;
+}
+.toggle-filters.active:not(.open) {
+  background: #2271b1;
+  color: #fff;
+  border-color: #2271b1;
+}
+.toggle-filters .dashicons {
+  margin-right: 2px;
+}
+
+.filters {
+  display: none;
+  position: absolute;
+  flex-wrap: wrap;
+  right: 0;
+  top: calc(100% + 12px);
+  width: 360px;
+  background: #fff;
+  border: solid 1px #C7D5DE;
+  border-radius: 5px;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1);
+}
+.filters.open {
+  display: flex;
+}
+.filters.save .select-filter,
+.filters.save .filter-heading,
+.filters.save .filter-options {
+  display: none;
+}
+.filters.save .save-form {
+  display: flex;
+}
+.filters.saving #save-filter {
+  color: transparent;
+}
+.filters.saving .loading-icon {
+  display: inline-block;
+}
+.filters.deleting #delete-filter {
+  color: transparent;
+}
+.filters.deleting .loading-icon {
+  display: inline-block;
+}
+.filters .filter-heading {
+  position: relative;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 24px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+.filters .filter-heading .title {
+  font-size: 21px;
+  font-weight: 800;
+}
+.filters .filter-heading .top {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+.filters .select-filter {
+  width: 100%;
+  margin-top: 12px;
+}
+.filters .filter-form {
+  overflow-y: scroll;
+  max-height: calc(100vh - 300px);
+  padding: 0 1px;
+}
+.filters .filter-options {
+  width: 100%;
+  padding: 12px 24px;
+  background: #F7F9FA;
+  border-radius: 0 0 5px 5px;
+}
+.filters .filter-options .title {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+.filters .filter-option-container {
+  margin-bottom: 12px;
+}
+.filters select,
+.filters input {
+  margin: 0;
+}
+.filters input[type=radio] {
+  margin: 0;
+}
+.filters label {
+  margin-right: 6px;
+}
+.filters label span {
+  vertical-align: middle;
+}
+.filters .select2-container {
+  margin: 6px 0 0;
+}
+.filters .select2-container .select2-selection__choice {
+  background: #2271b1 !important;
+  border: none !important;
+}
+.filters .close-filters {
+  display: none;
+  font-size: 22px;
+  line-height: 0;
+  align-self: center;
+  margin-left: 8px;
+  color: #2271b1;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.filters .logic.filter-option-container,
+.filters .context.filter-option-container,
+.filters .visibility.filter-option-container {
+  margin: 24px 0;
+}
+.filters .logic-icon {
+  font-size: 14px;
+  line-height: 1.3;
+}
+.filters .logic-icon:hover + .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+.filters .tooltip-container {
+  position: relative;
+  display: inline-block;
+  margin-left: -2px;
+}
+.filters .tooltip {
+  width: 300px;
+  left: -32px;
+}
+.filters .tooltip:after {
+  right: auto;
+  left: 43px;
+  border-top: solid 12px rgba(18, 17, 48, 0.8);
+  border-right: solid 18px transparent;
+  border-radius: 0 0 4px 0;
+  border-left: none;
+}
+.filters .tooltip p {
+  margin: 0 0 6px 0;
+}
+.filters .tooltip p:last-child {
+  margin-bottom: 0;
+}
+.filters .show-save-filter {
+  text-decoration: none;
+}
+.filters .reset-filter,
+.filters .delete-filter {
+  background: none;
+}
+.filters .save-form {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: #fff;
+  padding: 24px;
+  border-radius: 5px;
+}
+.filters .save-form .title {
+  font-size: 21px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 24px;
+}
+.filters .save-form .filter-name {
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 24px;
+}
+.filters .save-form .save-button-container,
+.filters .save-form .cancel-save-filter {
+  width: 48%;
+}
+.filters .save-form .save-filter {
+  width: 100%;
+}
+.filters .save-form .save-button-container {
+  position: relative;
+}
+.filters .buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.filters .delete-button-container {
+  position: relative;
+}
+.filters .delete-button-container .loading-icon {
+  top: 7px;
+  color: #EC524B;
+}
+.filters .delete-filter {
+  display: none;
+  color: #EC524B;
+}
+.filters .delete-filter:hover, .filters .delete-filter:active, .filters .delete-filter:focus {
+  border-color: #EC524B;
+  color: #EC524B;
+}
+.filters .delete-filter.show {
+  display: inline-block;
+}
+
+.calendar[data-filter-style=fade] .post,
+.unscheduled-drafts[data-filter-style=fade] .post {
+  opacity: 0.15;
+}
+.calendar[data-filter-style=remove] .post,
+.unscheduled-drafts[data-filter-style=remove] .post {
+  display: none;
+}
+.calendar[data-filter-style=remove] .post.visible,
+.unscheduled-drafts[data-filter-style=remove] .post.visible {
+  display: block;
+}
+.calendar .post.visible,
+.unscheduled-drafts .post.visible {
+  opacity: 1;
+}
+
+#wpbody-content {
+  padding-bottom: 0;
+}
+
+#wpfooter {
+  display: none;
+}
+
+.strive-content-calendar-parent .tab-content {
+  display: flex;
+}
+.strive-content-calendar-parent .loading {
+  display: none;
+  z-index: 39;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+}
+.strive-content-calendar-parent .loading img {
+  width: 200px;
+  height: 200px;
+}
+.strive-content-calendar-parent .calendar-footer {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 18px;
+}
+.strive-content-calendar-parent .calendar-footer div {
+  width: 50%;
+}
+.strive-content-calendar-parent .legend span {
+  display: inline-block;
+  vertical-align: middle;
+}
+.strive-content-calendar-parent .legend > span {
+  margin-right: 6px;
+}
+.strive-content-calendar-parent .legend span span {
+  font-size: 17px;
+}
+.strive-content-calendar-parent .legend .label {
+  font-weight: 700;
+}
+.strive-content-calendar-parent .legend .not-started span {
+  color: #EC524B;
+}
+.strive-content-calendar-parent .legend .writing span {
+  color: #F5B461;
+}
+.strive-content-calendar-parent .legend .editing span {
+  color: #F3EAC2;
+}
+.strive-content-calendar-parent .legend .complete span {
+  color: #9AD3BC;
+}
+.strive-content-calendar-parent .post-stats {
+  font-size: 14px;
+  text-align: right;
+}
+.strive-content-calendar-parent .post-stats p {
+  margin: 0;
+}
+.strive-content-calendar-parent .post-stats span {
+  font-weight: 700;
+}
+.strive-content-calendar-parent .insert-post-options,
+.strive-content-calendar-parent .insert-post {
+  position: fixed;
+  z-index: 19;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+.strive-content-calendar-parent .insert-post-options .inner,
+.strive-content-calendar-parent .insert-post .inner {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 24px;
+  width: 420px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 3px 18px 0 rgba(0, 0, 0, 0.4);
+}
+.strive-content-calendar-parent .insert-post-options .title,
+.strive-content-calendar-parent .insert-post .title {
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 36px;
+  width: 100%;
+  text-align: center;
+}
+.strive-content-calendar-parent .insert-post-options label,
+.strive-content-calendar-parent .insert-post label {
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+.strive-content-calendar-parent .insert-post-options button,
+.strive-content-calendar-parent .insert-post button {
+  padding: 6px 0;
+  width: 48%;
+}
+.strive-content-calendar-parent .insert-post-options select,
+.strive-content-calendar-parent .insert-post select {
+  padding: 2px 28px 2px 10px;
+  border-color: #C7D5DE;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+  width: 100%;
+  margin-bottom: 24px;
+}
+.strive-content-calendar-parent .insert-post-options .select2,
+.strive-content-calendar-parent .insert-post .select2 {
+  font-size: 14px;
+  margin: 0 auto 24px;
+}
+.strive-content-calendar-parent .insert-post-options .select2-container .select2-selection--single,
+.strive-content-calendar-parent .insert-post .select2-container .select2-selection--single {
+  height: 38px;
+}
+.strive-content-calendar-parent .insert-post-options .select2-selection__rendered,
+.strive-content-calendar-parent .insert-post .select2-selection__rendered {
+  padding-top: 4px;
+}
+.strive-content-calendar-parent .insert-post-options .select2-container--default .select2-selection--single .select2-selection__arrow,
+.strive-content-calendar-parent .insert-post .select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 36px;
+}
+.strive-content-calendar-parent .insert-post-options .close-button,
+.strive-content-calendar-parent .insert-post .close-button {
+  width: auto;
+  padding: 8px;
+}
+.strive-content-calendar-parent .insert-post-options .no-drafts,
+.strive-content-calendar-parent .insert-post .no-drafts {
+  width: 100%;
+  margin: 0 24px 24px;
+  text-align: center;
+}
+.strive-content-calendar-parent .insert-post-options {
+  visibility: hidden;
+  opacity: 0;
+}
+.strive-content-calendar-parent .insert-post-options.visible {
+  visibility: visible;
+  opacity: 1;
+}
+.strive-content-calendar-parent .insert-post button {
+  width: 100%;
+}
+.strive-content-calendar-parent .live-updates-toggle {
+  display: flex;
+  align-items: center;
+  border-radius: 24px;
+  margin-left: auto;
+  color: #fff;
+  background: #C7D5DE;
+  transition: background-color 0.1s;
+}
+.strive-content-calendar-parent .live-updates-toggle:hover {
+  background-color: #FFB1AD;
+}
+.strive-content-calendar-parent .live-updates-toggle.live {
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-name: live;
+          animation-name: live;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+.strive-content-calendar-parent .live-updates-toggle label {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  font-size: 16px;
+}
+.strive-content-calendar-parent .live-updates-toggle .circle {
+  font-size: 14px;
+  margin-right: 7px;
+}
+.strive-content-calendar-parent .live-updates-toggle input {
+  display: none;
+}
+
+.strive-calendar {
+  position: relative;
+  margin-right: 20px;
+  width: 100%;
+}
+.strive-calendar .unscheduled-drafts-toggle {
+  display: flex;
+  align-items: center;
+  line-height: 1.4em;
+  margin-left: 6px;
+}
+.strive-calendar .unscheduled-drafts-toggle .dashicons {
+  color: #2271b1;
+  font-size: 16px;
+  line-height: 1.3;
+  align-self: center;
+  margin-right: 3px;
+}
+.strive-calendar .dow-labels {
+  display: flex;
+  border-bottom: solid 1px #C7D5DE;
+  background: #F2F5F7;
+  padding: 2px 0 3px;
+}
+.strive-calendar .calendar-container > .dow-labels {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 79px;
+  z-index: 19;
+}
+.strive-calendar .dow {
+  width: 14.285%;
+  padding: 6px;
+  text-align: right;
+  font-size: 21px;
+}
+.strive-calendar .calendar-container {
+  background: #fff;
+  border: solid 1px #C7D5DE;
+  border-radius: 16px;
+}
+.strive-calendar .calendar-controls {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 39;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  padding: 20px 20px;
+  border-bottom: solid 1px #C7D5DE;
+  background: #fff;
+  border-radius: 16px 16px 0 0;
+}
+.strive-calendar .calendar-controls .date-select {
+  text-align: center;
+}
+.strive-calendar .calendar-controls .date-select .inner {
+  display: inline-block;
+}
+.strive-calendar .calendar-controls .date-select a {
+  display: inline-block;
+  font-size: 16px;
+  padding: 8px 12px;
+  text-decoration: none;
+  border: solid 1px #C7D5DE;
+  border-radius: 5px;
+  color: #333;
+  background: #fff;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+}
+.strive-calendar .calendar-controls .date-select a:hover {
+  color: #2271b1;
+}
+.strive-calendar .calendar-controls .date-select a .dashicons {
+  color: #2271b1;
+}
+.strive-calendar .calendar-controls .date-select a .dashicons-calendar-alt {
+  font-size: 22px;
+  line-height: 0.75;
+  margin-right: 2px;
+}
+.strive-calendar .calendar-controls .date-select a .dashicons-arrow-down-alt2.flip {
+  -webkit-transform: rotate(180deg) translateY(2px);
+          transform: rotate(180deg) translateY(2px);
+}
+.strive-calendar .calendar-controls .calendar-navigation {
+  position: absolute;
+  z-index: 9;
+  top: 69px;
+  left: 20px;
+  background: #fff;
+  border: solid 1px #C7D5DE;
+  border-radius: 5px;
+  width: 520px;
+  height: 420px;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1);
+}
+.strive-calendar .calendar-controls .calendar-navigation.show {
+  display: grid;
+  opacity: 1;
+  visibility: visible;
+}
+.strive-calendar .calendar-controls .calendar-navigation .nav-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  background: #2271b1;
+  color: #fff;
+}
+.strive-calendar .calendar-controls .calendar-navigation .nav-heading .date {
+  font-size: 18px;
+  margin: 0 auto;
+}
+.strive-calendar .calendar-controls .calendar-navigation .nav-heading .month {
+  font-weight: 800;
+}
+.strive-calendar .calendar-controls .calendar-navigation .dow-labels {
+  position: relative;
+  z-index: 9;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+.strive-calendar .calendar-controls .calendar-navigation .dow {
+  font-size: 14px;
+  text-align: center;
+}
+.strive-calendar .calendar-controls .calendar-navigation .days {
+  position: relative;
+  overflow-y: scroll;
+  height: 337px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-auto-rows: minmax(54px, auto);
+}
+.strive-calendar .calendar-controls .calendar-navigation .day {
+  padding: 16px 16px;
+  text-align: center;
+  background: #F2F2F2;
+  cursor: pointer;
+}
+.strive-calendar .calendar-controls .calendar-navigation .day:hover {
+  background: #E1FAF0;
+}
+.strive-calendar .calendar-controls .calendar-navigation .day.current {
+  background: #fff;
+}
+.strive-calendar .calendar-controls .calendar-navigation .day.current:hover {
+  background: #E1FAF0;
+}
+.strive-calendar .calendar-controls .calendar-navigation .day.user-selected {
+  background: #E1FAF0;
+}
+.strive-calendar .calendar-controls .calendar-navigation .day.first {
+  font-weight: 900;
+}
+.strive-calendar .calendar-controls .calendar-navigation .day.today {
+  border-radius: 0;
+}
+.strive-calendar .calendar-controls .calendar-navigation .day.today.user-selected {
+  background: #fff;
+}
+.strive-calendar .calendar-controls .calendar-navigation .day-select {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+}
+.strive-calendar .calendar-controls .calendar-navigation .week .selector {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #BAE0D1;
+  opacity: 0;
+}
+.strive-calendar .calendar-controls .calendar-navigation .week .selector:hover {
+  opacity: 0.3;
+}
+.strive-calendar .calendar-controls .calendar-navigation .week.current .day {
+  border-color: #9AD3BC;
+  background: #E1F7EE;
+  outline: solid 1px #9AD3BC;
+}
+.strive-calendar .calendar-controls .calendar-navigation .week.current .day.today {
+  border-color: #000;
+}
+.strive-calendar .calendar-controls .calendar-navigation .week.current + .week .day {
+  border-top-color: #9AD3BC;
+}
+.strive-calendar .calendar-controls .calendar-navigation .week.current + .week .day.today {
+  border-color: #000;
+}
+.strive-calendar .calendar-controls .calendar-navigation .week .today {
+  border-width: 3px;
+}
+.strive-calendar .calendar-controls .reset-button {
+  font-size: 16px;
+  padding-right: 14px;
+  margin: 0 auto 0 12px;
+  display: none;
+}
+.strive-calendar .calendar-controls .reset-button.show {
+  display: inline-block;
+}
+.strive-calendar .calendar-controls .reset-button .dashicons {
+  font-size: 15px;
+  line-height: 1.3;
+  color: #2271b1;
+}
+.strive-calendar .calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-auto-rows: minmax(160px, auto);
+  min-height: 500px;
+  border-radius: 0 0 16px 16px;
+  overflow: hidden;
+}
+.strive-calendar .day {
+  position: relative;
+  border: solid 1px #F2F2F2;
+  padding: 6px;
+  text-align: right;
+  background: #fff;
+  transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+}
+.strive-calendar .day:hover:not(.previous) .insert-new-post {
+  display: block;
+}
+.strive-calendar .day.last-month, .strive-calendar .day.next-month {
+  background: #F5F6F7;
+  border-color: #e6e6e6;
+}
+.strive-calendar .day.previous .post:not(.scheduled):not(.missed-deadline) .title, .strive-calendar .day.today .post:not(.scheduled):not(.missed-deadline) .title {
+  background: #121130 !important;
+  color: #fff;
+}
+.strive-calendar .day.previous .post:not(.scheduled):not(.missed-deadline) .time,
+.strive-calendar .day.previous .post:not(.scheduled):not(.missed-deadline) .revision-label,
+.strive-calendar .day.previous .post:not(.scheduled):not(.missed-deadline) .progress, .strive-calendar .day.today .post:not(.scheduled):not(.missed-deadline) .time,
+.strive-calendar .day.today .post:not(.scheduled):not(.missed-deadline) .revision-label,
+.strive-calendar .day.today .post:not(.scheduled):not(.missed-deadline) .progress {
+  color: #888;
+}
+.strive-calendar .day.previous .post:not(.scheduled):not(.missed-deadline) .progress.finished, .strive-calendar .day.today .post:not(.scheduled):not(.missed-deadline) .progress.finished {
+  background: #9AD3BC;
+  color: #121130 !important;
+}
+.strive-calendar .day.previous .post:not(.scheduled):not(.missed-deadline) .post-tags li, .strive-calendar .day.today .post:not(.scheduled):not(.missed-deadline) .post-tags li {
+  background: rgba(255, 255, 255, 0.2);
+}
+.strive-calendar .day.previous .post:not(.scheduled):not(.missed-deadline) .post-type-icon span, .strive-calendar .day.today .post:not(.scheduled):not(.missed-deadline) .post-type-icon span {
+  color: #fff;
+}
+.strive-calendar .day.today {
+  border: solid 4px #121130;
+  border-radius: 4px;
+}
+.strive-calendar .day.day-added {
+  background-color: #E1FAF0;
+  border-color: #E9F7F1;
+}
+.strive-calendar .day .date {
+  display: block;
+  text-align: right;
+}
+.strive-calendar .day .month-label {
+  font-weight: 900;
+}
+.strive-calendar .insert-new-post {
+  display: none;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  color: #121130;
+  font-size: 18px;
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.strive-calendar .insert-new-post:hover {
+  cursor: pointer;
+}
+.strive-calendar .previous .post-tags li {
+  background: rgba(255, 255, 255, 0.2);
+}
+.strive-calendar .previous .post .title:after {
+  background: linear-gradient(0deg, #121130 0%, rgba(18, 17, 48, 0.3) 100%);
+}
+.strive-calendar .previous .post .post-type-icon span {
+  color: #fff;
+}
+.strive-calendar .post-details {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+  background: #fff;
+  box-shadow: 0 3px 18px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  width: 90%;
+  margin: 0 auto;
+  min-width: 500px;
+  max-width: 800px;
+  background: #F2F5F7;
+}
+.strive-calendar .post-details .missed-deadline-explanation,
+.strive-calendar .post-details .edit-conflict {
+  background: #FFB1AD;
+  padding: 1px 12px;
+  margin: 12px 48px -12px;
+  color: #000;
+}
+.strive-calendar .post-details .missed-deadline-explanation a,
+.strive-calendar .post-details .edit-conflict a {
+  color: #000;
+  font-weight: 600;
+}
+.strive-calendar .post-details .missed-deadline-explanation a .dashicons,
+.strive-calendar .post-details .edit-conflict a .dashicons {
+  font-size: 16px;
+  text-decoration: none;
+}
+.strive-calendar .post-details .edit-conflict {
+  display: none;
+  background-color: #F3EAC2;
+}
+.strive-calendar .post-details .edit-conflict.show {
+  display: flex;
+}
+.strive-calendar .post-details .edit-conflict .dashicons {
+  font-size: 24px;
+  margin-top: 14px;
+  margin-right: 18px;
+  color: #EC524B;
+}
+.strive-calendar .post-details form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 12px 48px 42px;
+}
+.strive-calendar .post-details form input:not([type=submit]),
+.strive-calendar .post-details form select,
+.strive-calendar .post-details form .notes textarea {
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+  border-color: #C7D5DE;
+  padding: 4px 8px;
+  margin: 0;
+  width: 100%;
+  max-width: none;
+  border-color: #C7D5DE;
+}
+.strive-calendar .post-details form input:not([type=submit]):focus,
+.strive-calendar .post-details form select:focus,
+.strive-calendar .post-details form .notes textarea:focus {
+  border: solid 1px #2271b1;
+}
+.strive-calendar .post-details form .notes textarea {
+  width: 100%;
+}
+.strive-calendar .post-details form > div {
+  margin: 12px 0;
+  width: 100%;
+}
+.strive-calendar .post-details form.new-post .author,
+.strive-calendar .post-details form.new-post .date {
+  width: 49%;
+}
+.strive-calendar .post-details form.new-post.sidebar-draft .author {
+  width: 100%;
+}
+.strive-calendar .post-details form.sidebar-draft .status,
+.strive-calendar .post-details form.sidebar-draft .author {
+  width: 49%;
+}
+.strive-calendar .post-details .permalink {
+  display: flex;
+  flex-wrap: wrap;
+}
+.strive-calendar .post-details .permalink label {
+  width: 100%;
+}
+.strive-calendar .post-details .permalink span {
+  align-self: center;
+  padding: 4px 12px;
+  font-size: 14px;
+  line-height: 2;
+  min-height: 30px;
+  color: #828B91;
+  border: solid 1px #C7D5DE;
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+}
+.strive-calendar .post-details .permalink .post-permalink {
+  width: auto;
+  flex-grow: 1;
+  border-radius: 0 4px 4px 0;
+}
+.strive-calendar .post-details .title {
+  width: 100%;
+}
+.strive-calendar .post-details .status,
+.strive-calendar .post-details .author,
+.strive-calendar .post-details .date {
+  width: 32.6%;
+}
+.strive-calendar .post-details .categories,
+.strive-calendar .post-details .tags {
+  width: 49%;
+}
+.strive-calendar .post-details label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 1.143em;
+}
+.strive-calendar .post-details label:hover {
+  cursor: default;
+}
+.strive-calendar .post-details #post-title.empty,
+.strive-calendar .post-details #post-permalink.empty {
+  border-color: #EC524B;
+}
+.strive-calendar .post-details .publish-warning {
+  display: none;
+  position: relative;
+  width: 100%;
+  background: #FFB1AD;
+  padding: 12px;
+  color: #000;
+}
+.strive-calendar .post-details select {
+  padding-right: 28px;
+}
+.strive-calendar .post-details .status .select-container {
+  position: relative;
+}
+.strive-calendar .post-details .status .select-container .circle {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  font-size: 14px;
+  margin-right: 4px;
+}
+.strive-calendar .post-details .status .select-container[data-status=not-set] .circle, .strive-calendar .post-details .status .select-container[data-status=not-started] .circle {
+  color: #EC524B;
+}
+.strive-calendar .post-details .status .select-container[data-status=writing] .circle {
+  color: #F5B461;
+}
+.strive-calendar .post-details .status .select-container[data-status=editing] .circle {
+  color: #F3EAC2;
+}
+.strive-calendar .post-details .status .select-container[data-status=complete] .circle {
+  color: #9AD3BC;
+}
+.strive-calendar .post-details #post-status {
+  padding-left: 26px;
+}
+.strive-calendar .post-details #submit {
+  margin-right: 12px;
+}
+.strive-calendar .post-details #submit:disabled {
+  background: #E1E4E6 !important;
+}
+.strive-calendar .post-details .button {
+  flex-grow: 1;
+  padding: 6px 0;
+  margin-top: 18px;
+}
+.strive-calendar .post-details .unschedule-post {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  margin-top: 24px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: #2271b1;
+  text-decoration: underline;
+  text-align: center;
+  cursor: pointer;
+}
+.strive-calendar .post-details .unschedule-post:hover, .strive-calendar .post-details .unschedule-post:active, .strive-calendar .post-details .unschedule-post:focus {
+  color: #135e96;
+}
+.strive-calendar .close-button {
+  position: absolute;
+  z-index: 9;
+  top: -22px;
+  right: -22px;
+  border-radius: 50%;
+  padding: 12px;
+  background-color: #121130;
+  color: #fff;
+  box-shadow: -2px 2px 3px 0 rgba(0, 0, 0, 0.15);
+  border: solid 1px #f5f5f5;
+  transition: box-shadow 0.2s;
+}
+.strive-calendar .close-button:hover {
+  cursor: pointer;
+  box-shadow: -2px 2px 10px 0 rgba(0, 0, 0, 0.3);
+}
+.strive-calendar .categories * {
+  font-size: 14px;
+}
+.strive-calendar .quick-edit-header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  border-bottom: solid 1px #C7D5DE;
+  background: #fff;
+  padding: 36px 48px 30px;
+}
+.strive-calendar .quick-edit-header a {
+  float: right;
+  margin-left: 18px;
+  text-decoration: none;
+}
+.strive-calendar .quick-edit-header a:hover {
+  cursor: pointer;
+}
+.strive-calendar .quick-edit-heading {
+  display: inline-block;
+  font-size: 28px;
+  font-weight: 600;
+}
+.strive-calendar .quick-edit-links {
+  display: flex;
+  align-items: center;
+}
+
+.strive-calendar .post-container,
+.unscheduled-drafts .post-container {
+  height: calc(100% - 16px);
+}
+.strive-calendar .post,
+.unscheduled-drafts .post {
+  position: relative;
+  text-align: left;
+  margin-bottom: 4px;
+  color: #000;
+}
+.strive-calendar .post .post-categories,
+.unscheduled-drafts .post .post-categories {
+  display: block;
+  width: 100%;
+}
+.strive-calendar .post .post-categories span,
+.unscheduled-drafts .post .post-categories span {
+  display: block;
+  width: 100%;
+  padding: 1px 4px;
+  margin-bottom: 2px;
+  font-size: 13px;
+  line-height: 1.2;
+  border-radius: 4px;
+  background: #555;
+  color: #fff;
+}
+.strive-calendar .post .title,
+.unscheduled-drafts .post .title {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-height: 240px;
+  overflow: hidden;
+  padding: 4px 6px;
+  border-radius: 4px;
+  transition: 0.2s opacity;
+}
+.strive-calendar .post .title:after,
+.unscheduled-drafts .post .title:after {
+  content: "";
+  position: absolute;
+  height: 36px;
+  right: 0;
+  left: 0;
+  top: 204px;
+}
+.strive-calendar .post .title .post-title,
+.unscheduled-drafts .post .title .post-title {
+  width: 100%;
+  margin-bottom: 4px;
+}
+.strive-calendar .post .title .revision-label,
+.unscheduled-drafts .post .title .revision-label {
+  margin: 0 auto 0 3px;
+}
+.strive-calendar .post .time,
+.strive-calendar .post .revision-label,
+.strive-calendar .post .progress,
+.unscheduled-drafts .post .time,
+.unscheduled-drafts .post .revision-label,
+.unscheduled-drafts .post .progress {
+  color: #444;
+  font-size: 12px;
+}
+.strive-calendar .post .post-tags,
+.unscheduled-drafts .post .post-tags {
+  width: 100%;
+  margin: 2px 0 0;
+}
+.strive-calendar .post .post-tags li,
+.unscheduled-drafts .post .post-tags li {
+  display: inline-block;
+  font-size: 11px;
+  line-height: 1.2;
+  margin: 4px 3px 0 0;
+  padding: 3px 6px 4px;
+  background: rgba(0, 0, 0, 0.07);
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  border-radius: 24px;
+}
+.strive-calendar .post .progress.finished,
+.unscheduled-drafts .post .progress.finished {
+  color: #BAE0D1 !important;
+  background: #121130;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  border-radius: 9px;
+}
+.strive-calendar .post.missed-deadline .title,
+.unscheduled-drafts .post.missed-deadline .title {
+  border-radius: 4px 4px 0 0;
+}
+.strive-calendar .post .missed-deadline-notice,
+.unscheduled-drafts .post .missed-deadline-notice {
+  position: relative;
+  color: #fff;
+  background: #EC524B;
+  text-transform: uppercase;
+  padding: 4px 6px;
+  font-weight: 700;
+  border-radius: 0 0 4px 4px;
+  text-align: center;
+}
+.strive-calendar .post .post-title,
+.unscheduled-drafts .post .post-title {
+  display: flex;
+  justify-content: space-between;
+}
+.strive-calendar .post .post-type-icon,
+.unscheduled-drafts .post .post-type-icon {
+  display: inline-block;
+  margin-right: -2px;
+}
+.strive-calendar .post .post-type-icon span,
+.unscheduled-drafts .post .post-type-icon span {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.25;
+}
+.strive-calendar .post:hover .title,
+.unscheduled-drafts .post:hover .title {
+  opacity: 0.7;
+}
+.strive-calendar .post.status-not-set .title, .strive-calendar .post.status-not-started .title,
+.unscheduled-drafts .post.status-not-set .title,
+.unscheduled-drafts .post.status-not-started .title {
+  background: #FFB1AD;
+}
+.strive-calendar .post.status-not-set .title:after, .strive-calendar .post.status-not-started .title:after,
+.unscheduled-drafts .post.status-not-set .title:after,
+.unscheduled-drafts .post.status-not-started .title:after {
+  background: linear-gradient(0deg, #ffb1ad 0%, rgba(255, 177, 173, 0.3) 100%);
+}
+.strive-calendar .post.status-writing .title,
+.unscheduled-drafts .post.status-writing .title {
+  background: #FFDBAD;
+}
+.strive-calendar .post.status-writing .title:after,
+.unscheduled-drafts .post.status-writing .title:after {
+  background: linear-gradient(0deg, #ffdbad 0%, rgba(255, 219, 173, 0.3) 100%);
+}
+.strive-calendar .post.status-editing .title,
+.unscheduled-drafts .post.status-editing .title {
+  background: #FFF8D6;
+}
+.strive-calendar .post.status-editing .title:after,
+.unscheduled-drafts .post.status-editing .title:after {
+  background: linear-gradient(0deg, #fff8d6 0%, rgba(255, 248, 214, 0.3) 100%);
+}
+.strive-calendar .post.status-complete .title,
+.unscheduled-drafts .post.status-complete .title {
+  background: #BAE0D1;
+}
+.strive-calendar .post.status-complete .title:after,
+.unscheduled-drafts .post.status-complete .title:after {
+  background: linear-gradient(0deg, #bae0d1 0%, rgba(186, 224, 209, 0.3) 100%);
+}
+.strive-calendar .post.gu-mirror .edit-post, .strive-calendar .post.gu-transit .edit-post,
+.unscheduled-drafts .post.gu-mirror .edit-post,
+.unscheduled-drafts .post.gu-transit .edit-post {
+  display: none;
+}
+.strive-calendar .post.cannot-edit .title,
+.unscheduled-drafts .post.cannot-edit .title {
+  background: #ccc;
+}
+.strive-calendar .post.cannot-edit .title:after,
+.unscheduled-drafts .post.cannot-edit .title:after {
+  background: linear-gradient(0deg, rgb(204, 204, 204) 0%, rgba(204, 204, 204, 0.3) 100%);
+}
+.strive-calendar .post.cannot-edit:hover .title,
+.unscheduled-drafts .post.cannot-edit:hover .title {
+  opacity: 1;
+}
+.strive-calendar .quick-edit-link,
+.unscheduled-drafts .quick-edit-link {
+  position: absolute;
+  font-size: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+}
+.strive-calendar .quick-edit-link:hover,
+.unscheduled-drafts .quick-edit-link:hover {
+  cursor: pointer;
+}
+.strive-calendar .quick-edit-link:hover ~ .title, .strive-calendar .quick-edit-link:active ~ .title, .strive-calendar .quick-edit-link:focus ~ .title,
+.unscheduled-drafts .quick-edit-link:hover ~ .title,
+.unscheduled-drafts .quick-edit-link:active ~ .title,
+.unscheduled-drafts .quick-edit-link:focus ~ .title {
+  opacity: 0.7;
+}
+.strive-calendar .quick-edit-link:hover ~ .edit-post, .strive-calendar .quick-edit-link:active ~ .edit-post, .strive-calendar .quick-edit-link:focus ~ .edit-post,
+.unscheduled-drafts .quick-edit-link:hover ~ .edit-post,
+.unscheduled-drafts .quick-edit-link:active ~ .edit-post,
+.unscheduled-drafts .quick-edit-link:focus ~ .edit-post {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+.strive-calendar .edit-post,
+.unscheduled-drafts .edit-post {
+  position: absolute;
+  z-index: 9;
+  top: -6px;
+  right: -6px;
+  border-radius: 50%;
+  padding: 5px;
+  background-color: #fff;
+  color: #121130;
+  box-shadow: -2px 2px 3px 0 rgba(0, 0, 0, 0.15);
+  border: solid 1px #f5f5f5;
+  text-decoration: none;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+  transition: opacity 0.2s, visibility 0.2s, background-color 0.2s, color 0.2s, box-shadow 0.2s, -webkit-transform 0.2s;
+  transition: opacity 0.2s, visibility 0.2s, transform 0.2s, background-color 0.2s, color 0.2s, box-shadow 0.2s;
+  transition: opacity 0.2s, visibility 0.2s, transform 0.2s, background-color 0.2s, color 0.2s, box-shadow 0.2s, -webkit-transform 0.2s;
+}
+.strive-calendar .edit-post:hover,
+.unscheduled-drafts .edit-post:hover {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  cursor: pointer;
+  box-shadow: -2px 2px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.unscheduled-drafts {
+  display: none;
+  flex-direction: column;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 32px;
+  right: 0;
+  margin-top: -20px;
+  z-index: 9;
+  height: calc(100vh - 32px);
+  width: 200px;
+  padding: 12px 24px 24px;
+  background: #fff;
+  border-left: solid 1px #C7D5DE;
+}
+.unscheduled-drafts .drafts-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  margin: 0 0 24px;
+}
+.unscheduled-drafts .close-drafts {
+  font-size: 21px;
+  margin-right: -10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.unscheduled-drafts .close-drafts:hover {
+  color: #2271b1;
+}
+.unscheduled-drafts .search-container {
+  position: relative;
+}
+.unscheduled-drafts .search-container .dashicons-search,
+.unscheduled-drafts .search-container .dashicons-info-outline {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  color: #777;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.unscheduled-drafts .search-container .dashicons-info-outline {
+  display: none;
+  color: #121130;
+}
+.unscheduled-drafts .search-container .dashicons-info-outline:hover + .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+.unscheduled-drafts .add-new-drafts {
+  margin: 12px 0 0;
+}
+.unscheduled-drafts .add-new-drafts button {
+  width: 100%;
+  padding: 2px 16px;
+}
+.unscheduled-drafts .posts {
+  margin-top: 12px;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.strive-content-calendar-parent.unscheduled-sidebar-open .calendar {
+  border-radius: 0;
+}
+.strive-content-calendar-parent.unscheduled-sidebar-open .unscheduled-drafts-toggle {
+  display: none;
+}
+.strive-content-calendar-parent.unscheduled-sidebar-open .unscheduled-drafts {
+  display: flex;
+}
+.strive-content-calendar-parent.unscheduled-sidebar-open .strive-calendar {
+  width: calc(100% - 179px);
+  margin-left: -20px;
+  margin-right: -1px;
+}
+.strive-content-calendar-parent.unscheduled-sidebar-open .strive-calendar .calendar-container {
+  border-radius: 0;
+}
+.strive-content-calendar-parent.unscheduled-sidebar-open .strive-calendar .heading {
+  padding-right: 20px;
+}
+.strive-content-calendar-parent.unscheduled-sidebar-open .calendar-footer {
+  clear: both;
+}
+
+.strive-settings .form-table th {
+  width: 360px;
+  padding: 22px 10px 22px 0;
+  font-weight: 400;
+}
+
+@media all and (min-width: 601px) {
+  .strive-calendar .calendar-container > .dow-labels {
+    top: 125px;
+  }
+  .strive-calendar .calendar-controls {
+    top: 46px;
+  }
+}
+@media all and (min-width: 783px) {
+  .strive-content-calendar-parent .loading {
+    left: 36px;
+  }
+
+  .strive-calendar .calendar-container > .dow-labels {
+    top: 111px;
+  }
+  .strive-calendar .calendar-controls {
+    top: 32px;
+  }
+  .strive-calendar .post-details-container {
+    left: 36px;
+  }
+}
+@media all and (min-width: 961px) {
+  .strive-content-calendar-parent .loading {
+    left: 160px;
+  }
+
+  .strive-calendar .post-details-container {
+    left: 160px;
+  }
+
+  .posts_page_strive-content-calendar.folded .strive-content-calendar-parent .loading {
+    left: 36px;
+  }
+  .posts_page_strive-content-calendar.folded .strive-calendar .post-details-container {
+    left: 36px;
+  }
+}
+@media all and (min-width: 1200px) {
+  .strive-content-calendar-parent .unscheduled-drafts {
+    width: 300px;
+  }
+  .strive-content-calendar-parent.unscheduled-sidebar-open .strive-calendar {
+    width: calc(100% - 279px);
+  }
+}
+@media all and (max-height: 899px) {
+  .strive-calendar .post-details form {
+    overflow-y: scroll;
+    max-height: calc(100vh - 200px);
+  }
+}
+.strive-content-calendar-parent.color-blind .legend .not-started span {
+  color: #F29052;
+}
+.strive-content-calendar-parent.color-blind .legend .writing span {
+  color: #FFD666;
+}
+.strive-content-calendar-parent.color-blind .legend .editing span {
+  color: #73B9DE;
+}
+.strive-content-calendar-parent.color-blind .legend .complete span {
+  color: #7284C2;
+}
+.strive-content-calendar-parent.color-blind .day.previous .post:not(.scheduled):not(.missed-deadline) .progress.finished, .strive-content-calendar-parent.color-blind .day.today .post:not(.scheduled):not(.missed-deadline) .progress.finished {
+  background: #7284C2;
+}
+.strive-content-calendar-parent.color-blind .post .progress.finished {
+  color: #B9C5F0 !important;
+}
+.strive-content-calendar-parent.color-blind .post .missed-deadline-notice {
+  background: #EC524B;
+}
+.strive-content-calendar-parent.color-blind .post.status-not-set .title, .strive-content-calendar-parent.color-blind .post.status-not-started .title {
+  background: #FFD3B8;
+}
+.strive-content-calendar-parent.color-blind .post.status-not-set .title:after, .strive-content-calendar-parent.color-blind .post.status-not-started .title:after {
+  background: linear-gradient(0deg, #ffd3b8 0%, rgba(255, 211, 184, 0.3) 100%);
+}
+.strive-content-calendar-parent.color-blind .post.status-writing .title {
+  background: #FFF0C7;
+}
+.strive-content-calendar-parent.color-blind .post.status-writing .title:after {
+  background: linear-gradient(0deg, #fff0c7 0%, rgba(255, 240, 199, 0.3) 100%);
+}
+.strive-content-calendar-parent.color-blind .post.status-editing .title {
+  background: #C9ECFF;
+}
+.strive-content-calendar-parent.color-blind .post.status-editing .title:after {
+  background: linear-gradient(0deg, #c9ecff 0%, rgba(201, 236, 255, 0.3) 100%);
+}
+.strive-content-calendar-parent.color-blind .post.status-complete .title {
+  background: #B9C5F0;
+}
+.strive-content-calendar-parent.color-blind .post.status-complete .title:after {
+  background: linear-gradient(0deg, #b9c5f0 0%, rgba(185, 197, 240, 0.3) 100%);
+}
+.strive-content-calendar-parent.color-blind .post-details .missed-deadline-explanation {
+  background: #FFD3B8;
+}
+.strive-content-calendar-parent.color-blind .post-details .publish-warning {
+  color: #F29052;
+}
+.strive-content-calendar-parent.color-blind .post-details .status .select-container[data-status=not-set] .circle, .strive-content-calendar-parent.color-blind .post-details .status .select-container[data-status=not-started] .circle {
+  color: #F29052;
+}
+.strive-content-calendar-parent.color-blind .post-details .status .select-container[data-status=writing] .circle {
+  color: #FFD666;
+}
+.strive-content-calendar-parent.color-blind .post-details .status .select-container[data-status=editing] .circle {
+  color: #73B9DE;
+}
+.strive-content-calendar-parent.color-blind .post-details .status .select-container[data-status=complete] .circle {
+  color: #7284C2;
+}
+.strive-content-calendar-parent.color-blind .post-details .border {
+  background: repeating-linear-gradient(to right, #7284C2, #7284C2 25%, #73B9DE 25%, #73B9DE 50%, #FFD666 50%, #FFD666 75%, #F29052 75%, #F29052 100%);
+}

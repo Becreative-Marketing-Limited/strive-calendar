@@ -1,0 +1,429 @@
+@charset "UTF-8";
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes live {
+  0% {
+    background-color: #EC807B;
+  }
+  50% {
+    background-color: #FF0B00;
+  }
+  100% {
+    background-color: #EC807B;
+  }
+}
+@keyframes live {
+  0% {
+    background-color: #EC807B;
+  }
+  50% {
+    background-color: #FF0B00;
+  }
+  100% {
+    background-color: #EC807B;
+  }
+}
+.posts_page_strive-content-calendar-welcome {
+  background: #F2F5F7;
+}
+
+.strive-welcome-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: #F2F5F7;
+  z-index: 99999;
+  overflow: scroll;
+}
+.strive-welcome-container .logo-container {
+  text-align: center;
+}
+.strive-welcome-container .logo {
+  width: 300px;
+  height: auto;
+}
+.strive-welcome-container .inner {
+  max-width: 800px;
+  margin: 48px auto;
+}
+.strive-welcome-container .progress {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  margin: 36px 0;
+}
+.strive-welcome-container .progress a {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 24px;
+  text-align: center;
+  color: #525E66;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.strive-welcome-container .progress a:active, .strive-welcome-container .progress a:focus {
+  box-shadow: none;
+}
+.strive-welcome-container .progress a:after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: #9AD3BC;
+}
+.strive-welcome-container .progress a:first-child:after {
+  left: 50%;
+}
+.strive-welcome-container .progress a:last-child:after {
+  right: 50%;
+}
+.strive-welcome-container .progress a span {
+  position: absolute;
+  z-index: 9;
+  bottom: -14px;
+  left: calc(50% - 14px);
+  width: 18px;
+  height: 18px;
+  background-color: #fff;
+  border: solid 4px #9AD3BC;
+  border-radius: 50%;
+}
+.strive-welcome-container .progress a:after {
+  background-color: #2271b1;
+  background-color: #9AD3BC;
+}
+.strive-welcome-container .progress a span {
+  border-color: #2271b1;
+  border-color: #9AD3BC;
+  background-color: #fff;
+}
+.strive-welcome-container .progress a.current ~ a:after {
+  background-color: #C7D5DE;
+}
+.strive-welcome-container .progress a.current ~ a span {
+  border-color: #C7D5DE;
+  background-color: #F2F5F7;
+}
+.strive-welcome-container .progress a.current:before {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  bottom: -4px;
+  left: 50%;
+  right: 0;
+  height: 4px;
+  background-color: #C7D5DE;
+}
+.strive-welcome-container .progress a.current span:after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 5px;
+  left: 5px;
+  background: #9AD3BC;
+  border-radius: 50%;
+}
+.strive-welcome-container .progress a.current:last-child:before {
+  background-color: #F2F5F7;
+}
+.strive-welcome-container .skip-container {
+  text-align: center;
+}
+.strive-welcome-container .skip-container a {
+  color: #929BA1;
+  font-size: 14px;
+}
+.strive-welcome-container .skip-container a:hover, .strive-welcome-container .skip-container a:active, .strive-welcome-container .skip-container a:focus {
+  color: #525E66;
+}
+.strive-welcome-container .navigation {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 24px 60px;
+  border-top: solid 1px #C7D5DE;
+  border-radius: 0 0 16px 16px;
+  background: #F2F5F7;
+}
+.strive-welcome-container .navigation p {
+  margin: 0;
+  padding: 0;
+}
+.strive-welcome-container .navigation .start.button {
+  margin: 0 auto;
+}
+.strive-welcome-container .navigation .button {
+  font-size: 16px;
+  padding: 6px 18px;
+  margin: 0;
+}
+
+.welcome-box {
+  background: #fff;
+  border-radius: 16px;
+  margin: 48px auto;
+  border: solid 1px #C7D5DE;
+}
+.welcome-box .step {
+  padding: 48px 60px;
+  margin: 0 auto;
+  max-width: 620px;
+}
+.welcome-box .step.welcome {
+  text-align: center;
+}
+.welcome-box .step select {
+  padding: 2px 28px 2px 10px;
+  border-color: #C7D5DE;
+  border-radius: 5px;
+  box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.05);
+}
+.welcome-box form tr {
+  border-bottom: solid 1px #E4E8EB;
+}
+.welcome-box form th {
+  font-weight: 400;
+  width: 80%;
+}
+.welcome-box form td {
+  width: 20%;
+}
+.welcome-box form th,
+.welcome-box form td {
+  font-size: 18px;
+  line-height: 1.5;
+}
+.welcome-box form .submit,
+.welcome-box form .hidden-submit {
+  display: none;
+}
+.welcome-box input[type=radio]:checked::before {
+  position: relative;
+  top: -1px;
+  left: -1px;
+  background: none;
+  width: 6px;
+  height: 6px;
+  margin: 0;
+  border: solid 5px #2271b1;
+}
+.welcome-box .switch {
+  position: relative;
+  display: inline-block;
+  width: 52px;
+  height: 28px;
+}
+.welcome-box .switch input {
+  display: none;
+}
+.welcome-box .switch input:checked + .slider {
+  background-color: #2271b1;
+}
+.welcome-box .switch input:checked + .slider:before {
+  -webkit-transform: translateX(24px);
+          transform: translateX(24px);
+}
+.welcome-box .slider {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 24px;
+  cursor: pointer;
+  background-color: #ddd;
+  transition: background-color 0.2s;
+}
+.welcome-box .slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  top: 3px;
+  left: 3px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+.welcome-box .form-table .calendar-weeks,
+.welcome-box .form-table .calendar-prev-weeks,
+.welcome-box .form-table .unscheduled-drafts-open,
+.welcome-box .form-table .color-blind-mode,
+.welcome-box .form-table .show-categories,
+.welcome-box .form-table .category-colors,
+.welcome-box .form-table .show-tags,
+.welcome-box .form-table .live-updates {
+  display: none;
+}
+.welcome-box h2 {
+  font-size: 32px;
+  line-height: 1.334;
+  margin: 0;
+  font-weight: 700;
+  text-align: center;
+}
+.welcome-box .subheading {
+  font-size: 16px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+.welcome-box .welcome h2:before {
+  content: "✓";
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  text-align: center;
+  background: #9AD3BC;
+  color: #fff;
+  border-radius: 100%;
+  margin-right: 8px;
+  font-size: 32px;
+}
+.welcome-box p {
+  font-size: 18px;
+}
+.welcome-box p.center {
+  text-align: center;
+}
+.welcome-box .intro {
+  margin-top: 48px;
+}
+.welcome-box .note {
+  margin-top: 36px;
+  font-size: 16px;
+}
+.welcome-box .note span {
+  padding: 2px 3px 3px 6px;
+  font-weight: 700;
+  background: #fff3d0;
+  border-radius: 3px;
+}
+.welcome-box .posts {
+  margin-top: 48px;
+}
+.welcome-box .posts p {
+  margin: 0;
+}
+.welcome-box .posts-heading {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  margin-bottom: 18px;
+  padding-bottom: 18px;
+  border-bottom: solid 1px #E4E8EB;
+}
+.welcome-box .posts-heading span {
+  font-size: 18px;
+  font-weight: 700;
+}
+.welcome-box .post-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-bottom: 18px;
+  padding-bottom: 18px;
+  border-bottom: solid 1px #E4E8EB;
+}
+.welcome-box .post-title a {
+  color: #121130;
+  text-decoration: none;
+}
+.welcome-box .post-title a:hover, .welcome-box .post-title a:active, .welcome-box .post-title a:focus {
+  color: #2271b1;
+  text-decoration: underline;
+}
+.welcome-box .post-title .dashicons {
+  color: #2271b1;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-left: 4px;
+  text-decoration: none;
+}
+.welcome-box .status-container {
+  position: relative;
+}
+.welcome-box .status-container select {
+  padding-left: 26px;
+}
+.welcome-box .status-container .circle {
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  font-size: 14px;
+  margin-right: 4px;
+  color: #EC524B;
+}
+.welcome-box .status-container[data-status=writing] .circle {
+  color: #F5B461;
+}
+.welcome-box .status-container[data-status=editing] .circle {
+  color: #F3EAC2;
+}
+.welcome-box .status-container[data-status=complete] .circle {
+  color: #9AD3BC;
+}
+.welcome-box .no-posts {
+  background: #F2F5F7;
+  padding: 24px;
+  border: solid 1px #C7D5DE;
+  border-radius: 6px;
+  text-align: center;
+}
+.welcome-box .radio-buttons label {
+  margin-right: 6px;
+}
+.welcome-box .post-type {
+  position: relative;
+}
+.welcome-box .post-types-label {
+  display: block;
+  float: left;
+  clear: left;
+}
+.welcome-box .disabled-note {
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 400px;
+}
+
+@media all and (max-width: 782px) {
+  .post-types-label {
+    margin: 6px 0;
+  }
+
+  .disabled-note {
+    display: none;
+  }
+}

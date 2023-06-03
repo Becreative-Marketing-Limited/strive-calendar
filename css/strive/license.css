@@ -1,0 +1,82 @@
+.license-expired-notice .purchase {
+  background: #fff;
+  border: solid 1px #C7D5DE;
+  display: inline-block;
+  padding: 8px 12px;
+  text-decoration: none;
+  border-radius: 5px;
+  color: #333;
+  background: #fff;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+.license-expired-notice .purchase:hover {
+  color: #2271b1;
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes live {
+  0% {
+    background-color: #EC807B;
+  }
+  50% {
+    background-color: #FF0B00;
+  }
+  100% {
+    background-color: #EC807B;
+  }
+}
+@keyframes live {
+  0% {
+    background-color: #EC807B;
+  }
+  50% {
+    background-color: #FF0B00;
+  }
+  100% {
+    background-color: #EC807B;
+  }
+}
+.license-expired-notice {
+  margin-top: 36px;
+  background: #fff;
+  padding: 24px;
+  border-radius: 6px;
+  border: solid 1px #C7D5DE;
+  max-width: 600px;
+}
+.license-expired-notice p {
+  font-size: 16px;
+}
+.license-expired-notice .purchase {
+  font-size: 16px;
+  font-weight: 700;
+  background-color: #ff9900;
+  color: #fff;
+  transition: background-color 0.1s;
+  border: none;
+}
+.license-expired-notice .purchase:hover {
+  color: #fff;
+  background-color: #ffa826;
+}

@@ -13,87 +13,87 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../strive.php:66, ../strive.php:694
+#: ../strive.php:66, ../strive.php:687
 msgid "Affiliate Program"
 msgstr ""
 
-#: ../strive.php:516
+#: ../strive.php:511
 msgid "Primary"
 msgstr ""
 
-#: ../strive.php:572, ../strive.php:614, ../inc/calendar/calendar.php:32
+#: ../strive.php:566, ../strive.php:607, ../inc/calendar/calendar.php:32
 msgid "Content Calendar"
 msgstr ""
 
-#: ../strive.php:581
+#: ../strive.php:575
 msgid "Welcome to Strive!"
 msgstr ""
 
-#: ../strive.php:582, ../inc/welcome.php:41
+#: ../strive.php:576, ../inc/welcome.php:41
 msgid "Welcome"
 msgstr ""
 
-#: ../strive.php:658
+#: ../strive.php:651
 msgid "days"
 msgstr ""
 
-#: ../strive.php:656
+#: ../strive.php:649
 msgid "hours"
 msgstr ""
 
-#: ../strive.php:668, ../inc/filters.php:102, ../inc/settings.php:11, ../inc/welcome.php:46
+#: ../strive.php:661, ../inc/filters.php:102, ../inc/settings.php:11, ../inc/welcome.php:46
 msgid "Calendar"
 msgstr ""
 
-#: ../strive.php:671, ../inc/settings.php:13
+#: ../strive.php:664, ../inc/settings.php:13
 msgid "Pipeline"
 msgstr ""
 
-#: ../strive.php:675, ../inc/settings.php:12
+#: ../strive.php:668, ../inc/settings.php:12
 msgid "Checklists"
 msgstr ""
 
-#: ../strive.php:678, ../inc/calendar/calendar.php:41
+#: ../strive.php:671, ../inc/calendar/calendar.php:41
 msgid "Settings"
 msgstr ""
 
-#: ../strive.php:684
+#: ../strive.php:677
 msgid "Upgrade Now"
 msgstr ""
 
-#: ../strive.php:688
+#: ../strive.php:681
 msgid "Account"
 msgstr ""
 
-#: ../strive.php:691
+#: ../strive.php:684
 msgid "Contact"
 msgstr ""
 
-#: ../strive.php:769
+#: ../strive.php:762
 msgid "Not Started"
 msgstr ""
 
-#: ../strive.php:770
+#: ../strive.php:763
 msgid "Writing"
 msgstr ""
 
-#: ../strive.php:771
+#: ../strive.php:764
 msgid "Editing"
 msgstr ""
 
-#: ../strive.php:772
+#: ../strive.php:765
 msgid "Complete"
 msgstr ""
 
-#: ../strive.php:791
+#: ../strive.php:784
 msgid "Play the Checklists Tutorial"
 msgstr ""
 
-#: ../strive.php:788
+#: ../strive.php:781
 msgid "Play the Pipeline Tutorial"
 msgstr ""
 
-#: ../strive.php:785
+#: ../strive.php:778
 msgid "Play the Calendar Tutorial"
 msgstr ""
 

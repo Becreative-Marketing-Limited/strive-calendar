@@ -2,9 +2,9 @@
 Contributors: bensibley
 Tags: content calendar, editorial calendar, content marketing
 Requires at least: 5.2
-Tested up to: 6.0.1
+Tested up to: 6.0.2
 Requires PHP: 7.3.29
-Stable tag: 1.32
+Stable tag: 1.32.1
 License: GPL v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,10 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Strive Content Calendar is an all-in-one toolkit for publishers striving to succeed online.
 
 == Changelog ==
+
+= 1.32.1 August 31st, 2022 = 
+
+* **Update:** Changed free trial length from 30 days to 14 days
 
 = 1.32 July 15th, 2022 = 
 * **Update:** Day of the week labels stay visible when scrolling down the calendar
