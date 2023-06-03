@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Strive Content Calendar
- * Plugin URI:        https://strivecalendar.com/
+ * Plugin URI:        https://strivecalendar.com/pricing/
  * Description:       Strive Content Calendar helps you manage and master your publishing schedule.
  * Version:           1.0.0
  * Requires at least: 5.6
